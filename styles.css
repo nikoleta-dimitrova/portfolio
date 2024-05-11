@@ -22,6 +22,10 @@ body {
     overflow-x: hidden;
 }
 
+ul {
+    list-style: none;
+}
+
 section {
     min-height: 100vh;
     width: 100vw;
@@ -46,11 +50,16 @@ nav {
 
 nav a {
     text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease;
+    font-weight: 500;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid black;
 }
+
+
 
 .headline {
     display: flex;
@@ -112,6 +121,7 @@ nav a:hover {
 .say-hi a {
     position: absolute;
     font-size: 15px;
+    font-weight: 500;
 }
 
 .scroll-landing {
@@ -124,18 +134,20 @@ nav a:hover {
 .scroll-landing p {
     font-size: 15px;
     width: 125px;
-    line-height: 24px;
+    line-height: 22.5px;
+    font-weight: 500;
 }
 
 .skills {
-    list-style: none;
     margin-left: 25px;
     font-size: 15px;
+    line-height: 22.5px;
+    font-weight: 500;
 }
 
 .about-text {
     width: 50%;
-    text-indent: 150px;
+    text-indent: 175px;
     margin-inline: auto;
     text-align: justify;
     font-size: 18px;
@@ -143,15 +155,78 @@ nav a:hover {
     margin-top: 80px;
 }
 
-.headline.info {
+.headline.info,
+.footer {
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: 93%;
     align-items: flex-end;
     justify-content: space-between;
     margin-inline: auto;
     padding-bottom: 80px;
-    margin-top: -30px;
+    margin-top: -80px;
+}
+
+.get-in-touch {
+    margin-left: 70%;
+    font-size: 15px;
+    line-height: 22.5px;
+    font-weight: 500;
+}
+
+.get-in-touch div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin-top: 120px;
+}
+
+.get-in-touch div p {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.get-in-touch ul {
+    margin-top: 80px;
+    margin-left: 10px;
+}
+
+.get-in-touch div img,
+.get-in-touch div p {
+    position: absolute;
+}
+
+.footer {
+    margin-top: 110px;
+    padding-bottom: 30px;
+    align-items: center !important;
+    justify-content: space-between;
+}
+
+.footer div {
+    display: flex;
+    align-items: center;
+}
+
+.footer>p {
+    width: 220px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.footer div p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.contact-question {
+    width: 220px;
+    margin-left: 235px;
+    margin-top: 25px;
+    line-height: 27px;
 }
 
 .photo {
@@ -159,3 +234,6 @@ nav a:hover {
     width: 300px;
 }
 
+.arrow-top {
+    rotate: 180deg;
+}
