@@ -59,8 +59,6 @@ nav a:hover {
     border-bottom: 1px solid black;
 }
 
-
-
 .headline {
     display: flex;
     flex-direction: column;
@@ -99,9 +97,23 @@ nav a:hover {
     margin-inline: 0.3rem;
 }
 
-#letter-d {
-    font-size: 180px;
-    margin-right: .75rem;
+/* Fixing handwritten letters sizes */
+#letter-d,
+#letter-e,
+#letter-b,
+#letter-n {
+    font-size: 190px;
+    margin-right: 0.9rem;
+    line-height: 120px;
+}
+
+#letter-b {
+    margin-left: 10px;
+}
+
+#letter-n{
+    margin-right: 25px;
+
 }
 
 .say-hi {
@@ -236,4 +248,9 @@ nav a:hover {
 
 .arrow-top {
     rotate: 180deg;
+}
+
+#projects-page img {
+    height: 80px;
+    width: 80px;
 }
