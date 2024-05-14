@@ -235,10 +235,11 @@ nav a:hover {
 }
 
 .contact-question {
-    width: 220px;
+    width: 250px;
     margin-left: 235px;
     margin-top: 25px;
     line-height: 27px;
+    font-size: 18px;
 }
 
 .photo {
