@@ -1,9 +1,12 @@
-@import url('/assets/Druk Text Family');
-@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Inter:wght@100..900&family=Questrial&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Questrial&display=swap');
 
+@font-face {
+    font-family: "The Seasons";
+    src: url("./assets/Demo_Fonts/Fontspring-DEMO-theseasons-bd.otf");
+}
+
 :root {
-    --header-font: "Druk Text Trial";
+    --header-font: "The Seasons";
     --accent-font: "Inspiration";
     --body-font: "Inter";
     --font-color: #272727;
@@ -12,7 +15,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: var(--body-font), sans-serif;
+    font-family: var(--body-font), serif;
     color: var(--font-color);
     text-transform: uppercase;
     /* border: 1px solid red; */
@@ -40,7 +43,7 @@ section:nth-child(2n) {
 }
 
 nav {
-    font-size: 15px;
+    font-size: 14px;
     display: flex;
     position: fixed;
     top: 38px;
@@ -62,6 +65,7 @@ nav a:hover {
 .headline {
     display: flex;
     flex-direction: column;
+    padding-top: 38px;
     margin-top: 16px;
     margin-left: 38px;
 }
@@ -73,19 +77,18 @@ nav a:hover {
 
 .headline div .description {
     width: 190px;
-    margin-left: 25px;
+    margin-left: 50px;
     line-height: 27px;
-    font-size: 18px;
+    font-size: 16,8px;
+    margin-bottom: 25px;
 }
 
 .header {
     font-family: var(--header-font);
-    font-size: 200px;
-    font-weight: 600;
-    letter-spacing: -7px;
+    font-size: 175px;
+    letter-spacing: -10px;
     line-height: 10rem;
-    height: 12rem;
-    display: flex;
+    height: 10rem;
     align-items: center;
 }
 
@@ -132,7 +135,7 @@ nav a:hover {
 
 .say-hi a {
     position: absolute;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
 }
 
@@ -144,15 +147,15 @@ nav a:hover {
 }
 
 .scroll-landing p {
-    font-size: 15px;
-    width: 125px;
-    line-height: 22.5px;
+    font-size: 14px;
+    width: 115px;
+    line-height: 16.5px;
     font-weight: 500;
 }
 
 .skills {
     margin-left: 25px;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 22.5px;
     font-weight: 500;
 }
@@ -162,7 +165,7 @@ nav a:hover {
     text-indent: 175px;
     margin-inline: auto;
     text-align: justify;
-    font-size: 18px;
+    font-size: 16,8px;
     line-height: 27px;
     margin-top: 80px;
 }
@@ -181,7 +184,7 @@ nav a:hover {
 
 .get-in-touch {
     margin-left: 70%;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 22.5px;
     font-weight: 500;
 }
@@ -224,12 +227,12 @@ nav a:hover {
 
 .footer>p {
     width: 220px;
-    font-size: 12px;
+    font-size: 11,67px;
     line-height: 18px;
 }
 
 .footer div p {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     margin-right: 20px;
 }
@@ -239,7 +242,7 @@ nav a:hover {
     margin-left: 235px;
     margin-top: 25px;
     line-height: 27px;
-    font-size: 18px;
+    font-size: 16,8px;
 }
 
 .photo {
