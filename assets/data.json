@@ -1,31 +1,35 @@
 [
   {
     "id": 1,
-    "name": "Project",
+    "name": "FloryBelle",
     "scriptLetter": ["o"],
-    "tags": ["az", "ti"],
-    "description": "Cool project yesssssssssssss",
+    "tags": ["Branding", "Development"],
+    "description": "An app about taking care of plants.",
     "previewImage": "",
-    "url": "",
     "projectImages": [],
-    "expertise": [],
-    "techUsed": [],
-    "roleInProject": [],
+    "expertise": ["Concepting", "Branding", "Prototyping"],
+    "techUsed": ["Adobe XD", "Adobe Illustrator"],
+    "roleInProject": ["Lead Designer"],
     "bodyParagraphs": [
       {
-        "title": "About",
-        "body": "Maikati"
+        "title": "About Project",
+        "body": "An app about helping students take care of their plants. It will give them detailed information about their plant's needs and will help them keep their plants alive. <br /> <br /> They can scan their plants using their camera and the app will show them information about the moisture it needs, sunlight levels, soil quality, and room temperature.",
+        "images": ["", ""]
+      },
+      {
+        "title": "Problem Statement",
+        "body": "A lot of people are not being able to take care of their plants properly, do not understand their needs which leads to them dying our of unproper care.",
+        "images": ["", ""]
       }
     ]
   },
   {
     "id": 2,
-    "name": "Project",
+    "name": "Stormy",
     "scriptLetter": ["o"],
-    "tags": ["az", "ti"],
+    "tags": ["Branding", "Development", "UX/UI"],
     "description": "Cool project yesssssssssssss",
     "previewImage": "",
-    "url": "",
     "projectImages": [],
     "expertise": [],
     "techUsed": [],
@@ -39,12 +43,11 @@
   },
   {
     "id": 3,
-    "name": "Project",
-    "scriptLetter": ["o"],
-    "tags": ["az", "ti"],
+    "name": "PaveMind",
+    "scriptLetter": ["P"],
+    "tags": ["A"],
     "description": "Cool project yesssssssssssss",
     "previewImage": "",
-    "url": "",
     "projectImages": [],
     "expertise": [],
     "techUsed": [],
@@ -58,12 +61,11 @@
   },
   {
     "id": 4,
-    "name": "Project",
-    "scriptLetter": ["o"],
-    "tags": ["az", "ti"],
+    "name": "Ochaya",
+    "scriptLetter": ["c"],
+    "tags": ["Branding", "Development"],
     "description": "Cool project yesssssssssssss",
     "previewImage": "",
-    "url": "",
     "projectImages": [],
     "expertise": [],
     "techUsed": [],
