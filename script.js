@@ -1,4 +1,4 @@
-function createPreviewProject(project) {
+function createPreviewProject(project, idx) {
     const container = document.createElement("a")
     container.className = "project-container"
     container.href = `./project.html?pid=${project.id}`
@@ -6,8 +6,12 @@ function createPreviewProject(project) {
     const containerImg = document.createElement("img")
     const containerDetails = document.createElement("div")
 
+    const projectNumber = document.createElement("p")
+    projectNumber.innerHTML = `00${idx + 1}`
+
     const projectTitle = document.createElement("p")
-    projectTitle.innerHTML = project.name
+    projectTitle.className = "header"
+    projectTitle.innerHTML = project.name.replace(project.scriptLetter[0], `<span id="letter-o" class="accent">${project.scriptLetter[0]}</span>`);
 
     const projectFooter = document.createElement("div")
 
@@ -28,6 +32,7 @@ function createPreviewProject(project) {
     container.appendChild(containerImg)
     container.appendChild(containerDetails)
 
+    containerDetails.appendChild(projectNumber)
     containerDetails.appendChild(projectTitle)
     containerDetails.appendChild(projectFooter)
 
@@ -156,8 +161,8 @@ fetch('./assets/data.json')
             const projectBody = document.getElementById("project-body")
             projectBody.appendChild(html)
         } else {
-            projects.forEach(project => {
-                projectHTML = createPreviewProject(project)
+            projects.forEach((project, idx) => {
+                projectHTML = createPreviewProject(project, idx)
                 document.querySelector(".projects-grid").appendChild(projectHTML)
             })
         }
