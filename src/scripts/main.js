@@ -70,7 +70,6 @@ new Application();
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector("nav");
   const headlineNames = document.querySelectorAll("#landing-page .header");
-  const headline = document.querySelector(".headline");
   const description = document.querySelector(".description");
   const sayHi = document.querySelector(".say-hi");
   const scrollLanding = document.querySelector(".scroll-landing");
@@ -82,21 +81,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add event listeners to each nav link
   navLinks.forEach(link => {
     link.addEventListener("mouseenter", () => {
-      // Animate the width of the line to match the width of the hovered link
       gsap.to(underline, { width: link.offsetWidth, left: link.offsetLeft, duration: 0.5, ease: "power2.out" });
     });
 
     link.addEventListener("mouseleave", () => {
-      // Reset the width of the line to 0 when mouse leaves the link
       gsap.to(underline, { width: 0, duration: 0.5, ease: "power2.out" });
     });
   });
 
 
-  // Timeline for sequential animations on load
   const tl = gsap.timeline();
 
-  // Animate the headline names first
   tl.from(headlineNames, {
     y: 50,
     opacity: 0,
@@ -105,7 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.1
   });
 
-  // Animate the navigation bar, description, "Say Hi" button, and scroll landing together
   tl.from([nav, description, sayHi, scrollLanding], {
     y: 30,
     opacity: 0,
@@ -114,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.1
   }, "-=0.8"); // Overlap with previous animation by 0.8 seconds
 
-  // Create a GSAP timeline for the arrow animation
   const arrowTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "sine.inOut" });
   arrowTl.to(arrow, {
     y: -15,
