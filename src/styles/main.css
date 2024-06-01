@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inspiration&family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 @font-face {
   font-family: "The Seasons";
@@ -55,13 +56,16 @@ a {
 
 section {
   min-height: 100vh;
-  margin-top: calc(-16 * var(--scale));
   padding-bottom: calc(16 * var(--scale));
   width: 100vw;
   position: relative;
 }
 
-section:nth-child(2n) {
+#landing-page {
+  margin-top: calc(-16 * var(--scale));
+}
+
+.main-body section:nth-child(2n) {
   background-color: #e2e4d5;
 }
 
@@ -93,19 +97,19 @@ nav {
 }
 
 nav a {
-  padding-bottom: 2px; 
+  padding-bottom: 2px;
   text-decoration: none;
   font-weight: 500;
 }
 
 .underline {
-  position: absolute; 
+  position: absolute;
   bottom: 0;
   left: 0;
-  width: 0; 
+  width: 0;
   height: 0.8px;
   background-color: #272727;
-  transition: width 0.5s ease; 
+  transition: width 0.5s ease;
 }
 
 .headline {
@@ -152,7 +156,7 @@ nav a {
 #letter-n,
 #letter-o {
   margin-right: 0.7rem;
-  line-height: calc(100 * var(--scale));
+  line-height: calc(130 * var(--scale));
 }
 
 #letter-b {
@@ -224,26 +228,26 @@ nav a {
   width: 90%;
 }
 
-.project-container>img {
+.project-container > img {
   display: none;
   min-height: 90%;
   min-width: 100%;
   background-color: #f4f4f4;
 }
 
-.project-container>div {
+.project-container > div {
   display: flex;
   align-items: flex-end;
   margin-top: calc(150 * var(--scale));
 }
 
-.project-container>div>div {
+.project-container > div > div {
   display: flex;
   row-gap: calc(10 * var(--scale));
   flex-flow: row wrap;
 }
 
-.project-container>div>p {
+.project-container > div > p {
   font-size: calc(16.8 * var(--scale));
   margin-right: calc(20 * var(--scale));
 }
@@ -373,7 +377,7 @@ nav a {
   align-items: center;
 }
 
-.footer>p {
+.footer > p {
   width: calc(220 * var(--scale));
   font-size: calc(11.67 * var(--scale));
   line-height: 1.5;
@@ -417,22 +421,22 @@ nav a {
   line-height: 1.5;
 }
 
-.project-information>ul {
+.project-information > ul {
   margin-top: calc(150 * var(--scale));
 }
 
-.project-information>ul>p {
+.project-information > ul > p {
   font-weight: 500;
   font-size: calc(16.8 * var(--scale));
   line-height: 1.5;
   padding-bottom: calc(10 * var(--scale));
 }
 
-#project-about {
+.project-about {
   margin-bottom: calc(100 * var(--scale));
 }
 
-#project-about .description-one {
+.project-about .description {
   margin-top: calc(100 * var(--scale));
   margin-left: calc(140 * var(--scale));
   width: 72%;
@@ -441,22 +445,22 @@ nav a {
   justify-content: space-between;
 }
 
-#project-about .description-one>div {
+.project-about .description > div {
   display: grid;
   place-items: center;
   text-align: center;
   grid-template-areas: "inner-div";
 }
 
-#project-about .description-one>div img,
-#project-about .description-one>div p {
+.project-about .description > div img,
+.project-about .description > div p {
   grid-area: inner-div;
   width: calc(240 * var(--scale));
   font-size: calc(14 * var(--scale));
   font-weight: 500;
 }
 
-#project-about .description-one>p {
+.project-about .description > p {
   width: 60%;
   text-align: justify;
   font-size: calc(16.8 * var(--scale));
@@ -464,7 +468,7 @@ nav a {
   text-indent: calc(175 * var(--scale));
 }
 
-.description-one-gallery {
+.description-gallery {
   display: grid;
   grid-template-columns: repeat(2, auto);
   width: 90%;
@@ -473,13 +477,13 @@ nav a {
   margin-top: calc(100 * var(--scale));
 }
 
-.description-one-gallery img {
+.description-gallery img {
   min-height: calc(600 * var(--scale));
   width: 90%;
   background-color: #f4f4f4;
 }
 
-.description-one-gallery img:nth-child(2) {
+.description-gallery img:nth-child(2) {
   transform: translateY(50px);
 }
 

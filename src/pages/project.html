@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <script src="/src/scripts/project.js" type="module"></script>
+    <title>Projects</title>
+  </head>
+
+  <body onload="updateProjectHTML()" id="project-body">
+    <a href="/" class="back-button">Back to home</a>
+    <nav>
+      <a href="/index.html#projects-page">Projects</a>
+      <span>/</span>
+      <a href="/index.html#about-page">About</a>
+      <span>/</span>
+      <a href="/index.html#contact-page">Contact</a>
+    </nav>
+    <section id="project-landing">
+      <div class="headline">
+        <div>
+          <p class="header"></p>
+          <p class="description"></p>
+        </div>
+      </div>
+      <div class="project-information">
+        <ul>
+          <p></p>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul>
+          <p></p>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul>
+          <p></p>
+          <li></li>
+        </ul>
+      </div>
+    </section>
+    <section data-select="project-paralax"></section>
+    <section class="project-about" data-select="project-about" data-id="1">
+      <div class="description" data-select="description" data-id="1">
+        <div class="about-title">
+          <img src="./assets/opened-project-circle.svg" />
+          <p data-select="title" data-id="1"></p>
+        </div>
+        <p data-select="body" data-id="1"></p>
+      </div>
+      <div class="description-gallery" data-select="gallery" data-id="1">
+        <img />
+        <img />
+      </div>
+    </section>
+    <section data-select="project-paralax"></section>
+    <section class="project-about" data-select="project-about" data-id="2">
+      <div class="description" data-select="description" data-id="2">
+        <div class="about-title">
+          <img src="./assets/opened-project-circle.svg" />
+          <p data-select="title" data-id="2"></p>
+        </div>
+        <p data-select="body" data-id="2"></p>
+      </div>
+      <div class="description-gallery" data-select="gallery" data-id="2">
+        <img />
+        <img />
+      </div>
+    </section>
+    <section data-select="project-paralax"></section>
+    <section class="project-about" data-select="project-about" data-id="3">
+      <div class="description" data-select="description" data-id="3">
+        <div class="about-title">
+          <img src="./assets/opened-project-circle.svg" />
+          <p data-select="title" data-id="3"></p>
+        </div>
+        <p data-select="body" data-id="3"></p>
+      </div>
+      <div class="description-gallery" data-select="gallery" data-id="3">
+        <img />
+        <img />
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,5 +1,7 @@
 import gsap from "gsap";
+import '../styles/main.css';
 
+// WITH STAN's HELP FOR THE HOVER EFFECT
 class Application {
   constructor() {
     // Initialize mouse and position coordinates
