@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import '../styles/main.css';
 
+
 // WITH STAN's HELP FOR THE HOVER EFFECT
 class Application {
   constructor() {
@@ -93,6 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   const tl = gsap.timeline();
+  tl.set(document.querySelector(".main-body"), { alpha: 1 })
+
 
   tl.from(headlineNames, {
     y: 50,
@@ -118,8 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const circleTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "sine.inOut" });
   circleTl.to(sayHiCircle, {
-    rotation: 20, 
-    duration: 2, 
+    rotation: 20,
+    duration: 2,
   });
 });
 

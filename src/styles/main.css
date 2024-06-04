@@ -69,6 +69,10 @@ section {
   background-color: #e2e4d5;
 }
 
+.main-body {
+  opacity: 0;
+}
+
 .back-button {
   font-size: calc(14 * var(--scale));
   display: flex;
@@ -228,26 +232,26 @@ nav a {
   width: 90%;
 }
 
-.project-container > img {
+.project-container>img {
   display: none;
   min-height: 90%;
   min-width: 100%;
   background-color: #f4f4f4;
 }
 
-.project-container > div {
+.project-container>div {
   display: flex;
   align-items: flex-end;
   margin-top: calc(150 * var(--scale));
 }
 
-.project-container > div > div {
+.project-container>div>div {
   display: flex;
   row-gap: calc(10 * var(--scale));
   flex-flow: row wrap;
 }
 
-.project-container > div > p {
+.project-container>div>p {
   font-size: calc(16.8 * var(--scale));
   margin-right: calc(20 * var(--scale));
 }
@@ -377,7 +381,7 @@ nav a {
   align-items: center;
 }
 
-.footer > p {
+.footer>p {
   width: calc(220 * var(--scale));
   font-size: calc(11.67 * var(--scale));
   line-height: 1.5;
@@ -421,11 +425,11 @@ nav a {
   line-height: 1.5;
 }
 
-.project-information > ul {
+.project-information>ul {
   margin-top: calc(150 * var(--scale));
 }
 
-.project-information > ul > p {
+.project-information>ul>p {
   font-weight: 500;
   font-size: calc(16.8 * var(--scale));
   line-height: 1.5;
@@ -445,22 +449,22 @@ nav a {
   justify-content: space-between;
 }
 
-.project-about .description > div {
+.project-about .description>div {
   display: grid;
   place-items: center;
   text-align: center;
   grid-template-areas: "inner-div";
 }
 
-.project-about .description > div img,
-.project-about .description > div p {
+.project-about .description>div img,
+.project-about .description>div p {
   grid-area: inner-div;
   width: calc(240 * var(--scale));
   font-size: calc(14 * var(--scale));
   font-weight: 500;
 }
 
-.project-about .description > p {
+.project-about .description>p {
   width: 60%;
   text-align: justify;
   font-size: calc(16.8 * var(--scale));
