@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sayHiCircle = document.querySelector(".say-hi img");
   const underline = document.querySelector(".underline");
   const navLinks = document.querySelectorAll("nav a");
+  const playgroundImg = document.querySelectorAll(".playground img");
 
   // Add event listeners to each nav link
   navLinks.forEach(link => {
@@ -92,10 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
   const tl = gsap.timeline();
   tl.set(document.querySelector(".main-body"), { alpha: 1 })
-
 
   tl.from(headlineNames, {
     y: 50,
@@ -111,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 1.5,
     ease: "power2.out",
     stagger: 0.1
-  }, "-=0.8"); // Overlap with previous animation by 0.8 seconds
+  }, "-=0.8");
 
   const arrowTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "sine.inOut" });
   arrowTl.to(arrow, {
@@ -119,32 +118,38 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 1.5,
   });
 
-  const circleTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "sine.inOut" });
+  const circleTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "power2-out" });
   circleTl.to(sayHiCircle, {
-    rotation: 20,
+    rotation: 15,
     duration: 2,
   });
+
+  const playgroundTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "power2-out" });
+  playgroundTl.to(playgroundImg, {
+    rotation: 5,
+    duration: 2,
+  })
+ 
 });
 
 
-// SCROLL TO SECTIONS
+// -----------------------SCROLL TO SECTIONS---------------------------
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
 document.addEventListener("DOMContentLoaded", () => {
-  // Function to smooth scroll to a target
+
   const smoothScrollTo = (target) => {
     gsap.to(window, {
       scrollTo: {
         y: target,
-        autoKill: false // Optional: disable auto-killing of the scroll
+        autoKill: false 
       },
-      duration: 1.5, // Duration of the scroll animation
+      duration: 2, 
       ease: "power2.out"
     });
   };
 
-  // Add click event listeners to navigation links
   document.querySelectorAll("nav a").forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
@@ -156,3 +161,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+// ------------------BACK TO TOP BUTTON ----------------------------
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopButton = document.getElementById('back-to-top');
+  const arrow = document.querySelector('.arrow-top');
+
+  backToTopButton.addEventListener('click', () => {
+    gsap.to(window, {
+      duration: 4,
+      scrollTo: { y: 0, autoKill: true },
+      ease: "power4.out"
+    });
+  });
+
+  const arrowTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "sine.inOut" });
+  arrowTl.to(arrow, {
+    y: -10,
+    duration: 1.2,
+  });
+});
+
+
