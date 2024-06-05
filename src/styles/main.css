@@ -149,8 +149,9 @@ nav a {
   font-family: var(--accent-font), cursive;
   font-size: calc(170 * var(--scale));
   font-weight: 200;
-  align-self: flex-end;
   margin-inline: 0.3rem;
+  margin-top: calc(40 * var(--scale));
+
 }
 
 /* Fixing handwritten letters sizes */
