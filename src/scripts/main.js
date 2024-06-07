@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const footerAnimation = document.querySelector(".footer");
   const myPhoto = document.querySelector(".photo");
   const numberProjects = document.getElementById("circle-number-projects");
-  const circlePlayground = document.getElementById("circle-playground")
+  const circlePlayground = document.getElementById("circle-playground");
 
   // ScrollSmoother.create({
   //   smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
@@ -143,6 +143,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     );
+  })
+
+  gsap.utils.toArray('.header-title').forEach(element => {
+  gsap.fromTo(element,
+    { opacity: 0, y: -50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: element,
+        start: "top 95%",
+        toggleActions: "play reverse play reverse",
+
+      }
+    }
+  );
   })
 
   const arrowTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "sine.inOut" });
