@@ -1,7 +1,9 @@
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import '../styles/main.css';
+
+import ScrollTrigger from "gsap/ScrollTrigger";
+// import ScrollSmoother from "gsap/ScrollSmoother";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -50,38 +52,36 @@ class Application {
   };
 }
 
-class Factory {
-  constructor(config = {}) {
-    this.$element = config.element;
-    this.types = config.types;
-    this.components = this.getComponents();
-  }
+// class Factory {
+//   constructor(config = {}) {
+//     this.$element = config.element;
+//     this.types = config.types;
+//     this.components = this.getComponents();
+//   }
 
-  getComponents() {
-    const $elements = gsap.utils.toArray(this.$element.querySelectorAll("[data-component]"));
-    return $elements.reduce((components, $element) => {
-      const id = $element.dataset.id;
-      const type = $element.dataset.component;
-      const component = new this.types[type]({ id: id, type, element: $element });
-      components[id] = component;
-      return components;
-    }, {});
-  }
-}
+//   getComponents() {
+//     const $elements = gsap.utils.toArray(this.$element.querySelectorAll("[data-component]"));
+//     return $elements.reduce((components, $element) => {
+//       const id = $element.dataset.id;
+//       const type = $element.dataset.component;
+//       const component = new this.types[type]({ id: id, type, element: $element });
+//       components[id] = component;
+//       return components;
+//     }, {});
+//   }
+// }
 
-class Parallax {
-  constructor(config = {}) {
-    this.id = config.id;
-    this.$element = config.element;
-    this.$image = this.$element.querySelector("[data-select='parallax-image']");
-    gsap.fromTo(this.$image, { yPercent: -50 }, { yPercent: 50, duration: 1.0, ease: "none", scrollTrigger: { trigger: this.$element, scrub: true } });
-  }
-}
+// class Parallax {
+//   constructor(config = {}) {
+//     this.id = config.id;
+//     this.$element = config.element;
+//     this.$image = this.$element.querySelector("[data-select='parallax-image']");
+//     gsap.fromTo(this.$image, { yPercent: -50 }, { yPercent: 50, duration: 1.0, ease: "none", scrollTrigger: { trigger: this.$element, scrub: true } });
+//   }
+// }
 
-// ----------------------------LANDING PAGE ANIMATIONS --------------------------------
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector("nav");
-  const headlineNames = document.querySelectorAll("#landing-page .header");
   const description = document.querySelector(".description");
   const sayHi = document.querySelector(".say-hi");
   const scrollLanding = document.querySelector(".scroll-landing");
@@ -89,9 +89,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const sayHiCircle = document.querySelector(".say-hi img");
   const underline = document.querySelector(".underline");
   const navLinks = document.querySelectorAll("nav a");
-  const playgroundImg = document.querySelectorAll(".playground img");
   const arrowTop = document.querySelector('.arrow-top');
   const backToTopButton = document.getElementById('back-to-top');
+  const aboutMe = document.querySelector(".about-text");
+  const contactQuestion = document.querySelector(".contact-question");
+  const getTouch = document.querySelector(".get-in-touch");
+  const footerAnimation = document.querySelector(".footer");
+  const myPhoto = document.querySelector(".photo");
+  const numberProjects = document.getElementById("circle-number-projects");
+  const circlePlayground = document.getElementById("circle-playground")
+
+  // ScrollSmoother.create({
+  //   smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
+  //   effects: true, // looks for data-speed and data-lag attributes on elements
+  //   smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+  // });
 
   navLinks.forEach(link => {
     link.addEventListener("mouseenter", () => {
@@ -103,24 +115,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const tl = gsap.timeline();
-  tl.set(document.querySelector(".main-body"), { alpha: 1 });
+  gsap.set(document.querySelector(".main-body"), { alpha: 1 });
 
-  tl.from(headlineNames, {
-    y: 50,
+  gsap.from([nav], {
+    transform: 'translateY(-50px)',
     opacity: 0,
     duration: 1.5,
     ease: "power2.out",
-    stagger: 0.1
-  });
-
-  tl.from([nav, description, sayHi, scrollLanding], {
-    y: 30,
-    opacity: 0,
-    duration: 1.5,
-    ease: "power2.out",
-    stagger: 0.1
+    stagger: 0.1,
   }, "-=0.8");
+
+  // -----------------------LANDING SCREEN---------------------------
+  gsap.utils.toArray([sayHi, description, scrollLanding]).forEach(element => {
+    gsap.fromTo(element,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 95%",
+          toggleActions: "play reverse play reverse",
+          onEnter: () => {
+            gsap.to(element, { opacity: 1, y: 0, duration: 1 });
+          }
+        }
+      }
+    );
+  })
 
   const arrowTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "sine.inOut" });
   arrowTl.to(arrow, {
@@ -172,12 +195,180 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 1.2,
   });
 
-  new Application();
-  new Factory({
-    element: document.body,
-    types: {
-      parallax: Parallax,
-    },
+
+  // --------------------ANIMATED HEADLINES-------------------
+  gsap.utils.toArray('.header').forEach(headline => {
+    gsap.fromTo(headline,
+      { opacity: 0, transform: 'translateY(50px)' },
+      {
+        opacity: 1,
+        transform: 'translateY(0px)',
+        duration: 1,
+        scrollTrigger: {
+          trigger: headline,
+          start: "top 95%",
+          toggleActions: "play reverse play reverse",
+        }
+      }
+    );
   });
 
+  // --------------------PROJECT SECTION---------------------
+  gsap.utils.toArray('.project-tag').forEach(tag => {
+    gsap.fromTo(tag,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: tag,
+          start: "top 95%",
+          toggleActions: "play reverse play reverse",
+        }
+      }
+    );
+  });
+
+  gsap.utils.toArray('.number-of-project').forEach(number => {
+    gsap.fromTo(number,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: number,
+          start: "top 95%",
+          toggleActions: "play reverse play reverse",
+        }
+      }
+    );
+  });
+
+  gsap.fromTo(numberProjects,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: numberProjects,
+        start: "top 95%",
+        toggleActions: "play reverse play reverse",
+
+      }
+    }
+  );
+
+  gsap.fromTo(circlePlayground,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: circlePlayground,
+        start: "top 95%",
+        toggleActions: "play reverse play reverse",
+
+      }
+    }
+  );
+
+  // --------------------ABOUT ME SECTION-------------------
+  gsap.fromTo(aboutMe,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: aboutMe,
+        start: "top 95%",
+        toggleActions: "play reverse play reverse",
+      }
+    }
+  );
+
+  gsap.utils.toArray('.skills').forEach(skills => {
+    gsap.fromTo(skills,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: skills,
+          start: "top 100%",
+          toggleActions: "play reverse play reverse",
+        }
+      }
+    );
+  });
+
+  gsap.fromTo(myPhoto,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: myPhoto,
+        start: "top 95%",
+        toggleActions: "play reverse play reverse",
+      }
+    }
+  );
+
+  // --------------------CONTACT SECTION-------------------
+  gsap.fromTo(contactQuestion,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: contactQuestion,
+        start: "top 95%",
+        toggleActions: "play reverse play reverse",
+      }
+    }
+  );
+
+  gsap.fromTo(getTouch,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: getTouch,
+        start: "top 95%",
+        toggleActions: "play reverse play reverse",
+      }
+    }
+  );
+
+  gsap.fromTo(footerAnimation,
+    { opacity: 0, y: 20 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: footerAnimation,
+        start: "top 100%",
+        toggleActions: "play reverse play reverse",
+      }
+    }
+  );
+
+  new Application();
+  // new Factory({
+  //   element: document.body,
+  //   types: {
+  //     parallax: Parallax,
+  //   },
+  // });
 });
