@@ -52,33 +52,33 @@ class Application {
   };
 }
 
-// class Factory {
-//   constructor(config = {}) {
-//     this.$element = config.element;
-//     this.types = config.types;
-//     this.components = this.getComponents();
-//   }
+class Factory {
+  constructor(config = {}) {
+    this.$element = config.element;
+    this.types = config.types;
+    this.components = this.getComponents();
+  }
 
-//   getComponents() {
-//     const $elements = gsap.utils.toArray(this.$element.querySelectorAll("[data-component]"));
-//     return $elements.reduce((components, $element) => {
-//       const id = $element.dataset.id;
-//       const type = $element.dataset.component;
-//       const component = new this.types[type]({ id: id, type, element: $element });
-//       components[id] = component;
-//       return components;
-//     }, {});
-//   }
-// }
+  getComponents() {
+    const $elements = gsap.utils.toArray(this.$element.querySelectorAll("[data-component]"));
+    return $elements.reduce((components, $element) => {
+      const id = $element.dataset.id;
+      const type = $element.dataset.component;
+      const component = new this.types[type]({ id: id, type, element: $element });
+      components[id] = component;
+      return components;
+    }, {});
+  }
+}
 
-// class Parallax {
-//   constructor(config = {}) {
-//     this.id = config.id;
-//     this.$element = config.element;
-//     this.$image = this.$element.querySelector("[data-select='parallax-image']");
-//     gsap.fromTo(this.$image, { yPercent: -50 }, { yPercent: 50, duration: 1.0, ease: "none", scrollTrigger: { trigger: this.$element, scrub: true } });
-//   }
-// }
+class Parallax {
+  constructor(config = {}) {
+    this.id = config.id;
+    this.$element = config.element;
+    this.$image = this.$element.querySelector("[data-select='parallax-image']");
+    gsap.fromTo(this.$image, { yPercent: -50 }, { yPercent: 50, duration: 1.0, ease: "none", scrollTrigger: { trigger: this.$element, scrub: true } });
+  }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector("nav");
@@ -382,10 +382,10 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   new Application();
-  // new Factory({
-  //   element: document.body,
-  //   types: {
-  //     parallax: Parallax,
-  //   },
-  // });
+  new Factory({
+    element: document.body,
+    types: {
+      parallax: Parallax,
+    },
+  });
 });
