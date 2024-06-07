@@ -371,7 +371,7 @@ nav a {
 }
 
 .footer {
-  margin-top: calc(110 * var(--scale));
+  margin-top: calc(150 * var(--scale));
   padding-bottom: calc(30 * var(--scale));
   align-items: center !important;
   justify-content: space-between;

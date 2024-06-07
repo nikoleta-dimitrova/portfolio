@@ -16,13 +16,13 @@ const projectArr = [
                 "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
             },
             {
-                "title": "Problem Statement",
+                "title": "Main Problem",
                 "body": "A lot of people are not being able to take care of their plants properly, do not understand their needs which leads to them dying our of unproper care.",
                 "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
             },
             {
-                "title": "Problem Statement",
-                "body": "A lot of people are not being able to take care of their plants properly, do not understand their needs which leads to them dying our of unproper care.",
+                "title": "Results",
+                "body": "The FlorryBelle App will give the students access to detailed information, moisture and sunlight levels, soil quality and room temperature. This can all happen with the help of a monitoring device placed directly in their plant pot. <br><br> The app and device will help them keep their plants alive and taking proper care of them. The monitoring device will also have watering function that is going to be very useful for the students that go back home frequently and leave their plants alone. They will be able to water their plants with just a few clicks in the app.",
                 "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
             }
         ]
@@ -39,8 +39,19 @@ const projectArr = [
         "roleInProject": [],
         "bodyParagraphs": [
             {
-                "title": "About",
-                "body": "Maikati"
+                "title": "About Project",
+                "body": "An app about helping students take care of their plants. It will give them detailed information about their plant's needs and will help them keep their plants alive. <br /> <br /> They can scan their plants using their camera and the app will show them information about the moisture it needs, sunlight levels, soil quality, and room temperature.",
+                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
+            },
+            {
+                "title": "Main Problem",
+                "body": "A lot of people are not being able to take care of their plants properly, do not understand their needs which leads to them dying our of unproper care.",
+                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
+            },
+            {
+                "title": "Results",
+                "body": "The FlorryBelle App will give the students access to detailed information, moisture and sunlight levels, soil quality and room temperature. This can all happen with the help of a monitoring device placed directly in their plant pot. <br><br> The app and device will help them keep their plants alive and taking proper care of them. The monitoring device will also have watering function that is going to be very useful for the students that go back home frequently and leave their plants alone. They will be able to water their plants with just a few clicks in the app.",
+                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
             }
         ]
     },
@@ -48,16 +59,27 @@ const projectArr = [
         "id": 3,
         "name": "PaveMind",
         "scriptLetter": ["P"],
-        "tags": ["Branding", "Development", "Concepting"],
-        "description": "Cool project yesssssssssssss",
+        "tags": ["Prototyping", "Development", "Research"],
+        "description": "A mental health website for burnout",
         "projectImages": [],
-        "expertise": [],
-        "techUsed": [],
-        "roleInProject": [],
+        "expertise": ["Prototyping", "Development", "Research", "Concepting"],
+        "techUsed": ["Adobe XD", "Adobe Illustrator", "Adobe InDesign", "HTML, CSS, JS"],
+        "roleInProject": ["Lead Designer", "Developer"],
         "bodyParagraphs": [
             {
-                "title": "About",
-                "body": "Maikati"
+                "title": "About Project",
+                "body": "PaveMind is an educational website for students where they can not only help each other with burnout and mental health but also find tips and tricks on how to cope with it, become more aware of the problem, and learn new things about the topic.",
+                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
+            },
+            {
+                "title": "Main Problem",
+                "body": "A large portion of people are suffering from mental health issues daily. The numbers are reaching record rates because of how hectic our daily life has become. People are feeling the effects of overworking themselves and aren't feeling capable of continuing their work as efficiently as they did before.",
+                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
+            },
+            {
+                "title": "Results",
+                "body": "Our product emphasizes on the following: reliability, student comfort, privacy, community, and professionalism. <br><br> Thanks to our wide user research we were able to precisely create the most proficient solution which is a platform about burnout featuring: a questionnaire, an accurate selection of articles, community, tips, and tricks.",
+                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
             }
         ]
     },
@@ -73,8 +95,19 @@ const projectArr = [
         "roleInProject": [],
         "bodyParagraphs": [
             {
-                "title": "About",
-                "body": "Maikati"
+                "title": "About Project",
+                "body": "An app about helping students take care of their plants. It will give them detailed information about their plant's needs and will help them keep their plants alive. <br /> <br /> They can scan their plants using their camera and the app will show them information about the moisture it needs, sunlight levels, soil quality, and room temperature.",
+                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
+            },
+            {
+                "title": "Main Problem",
+                "body": "A lot of people are not being able to take care of their plants properly, do not understand their needs which leads to them dying our of unproper care.",
+                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
+            },
+            {
+                "title": "Results",
+                "body": "The FlorryBelle App will give the students access to detailed information, moisture and sunlight levels, soil quality and room temperature. This can all happen with the help of a monitoring device placed directly in their plant pot. <br><br> The app and device will help them keep their plants alive and taking proper care of them. The monitoring device will also have watering function that is going to be very useful for the students that go back home frequently and leave their plants alone. They will be able to water their plants with just a few clicks in the app.",
+                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
             }
         ]
     }
