@@ -120,7 +120,6 @@ nav a {
   display: flex;
   flex-direction: column;
   padding-top: calc(24 * var(--scale));
-  margin-top: calc(8 * var(--scale));
   margin-left: calc(38 * var(--scale));
 }
 
@@ -522,4 +521,30 @@ nav a {
   font-size: calc(14 * var(--scale));
   line-height: 1.5;
   font-weight: 500;
+}
+
+
+/*---------------------- Parallax Section----------------------- */
+.parallax {
+  position: relative;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.content__list {
+  margin: 0;
+  padding: 0; 
+}
+
+.content__item {
+  height: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 }

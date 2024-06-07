@@ -1,73 +1,82 @@
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import '../styles/main.css';
 
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 // WITH STAN's HELP FOR THE HOVER EFFECT
 class Application {
   constructor() {
-    // Initialize mouse and position coordinates
     this.mouse = { x: 0, y: 0 };
     this.position = { x: 0, y: 0 };
 
-    // Select all project elements and image elements
     this.$projects = [...document.querySelectorAll("[data-select='project']")];
     this.$images = [...document.querySelectorAll("[data-select='image']")];
 
-    // Set the initial scale of images to 0 (hidden)
     gsap.set(this.$images, { scale: 0 });
 
-    // Add event listeners for each project element
     this.$projects.forEach(($project) => {
       const id = $project.dataset.id;
-      // Handle mouse enter event
       $project.addEventListener("mouseenter", () => this.handleProjectEnter(id));
-      // Handle mouse leave event
       $project.addEventListener("mouseleave", () => this.handleProjectLeave(id));
     });
 
-    // Add event listener for mouse move on the window
     window.addEventListener("mousemove", this.handleMouseMove);
-
-    // Add the tick function to the GSAP ticker (animation loop)
     gsap.ticker.add(this.handleTick);
   }
 
-  // Handle project mouse enter event
   handleProjectEnter = (id) => {
-    // Find the corresponding image by data-id
     this.image = this.$images.find((image) => image.dataset.id === id);
-    // Animate the image to scale 1 (visible)
     gsap.to(this.image, { scale: 1.1, ease: "power2.out", duration: 1 });
   };
 
-  // Handle project mouse leave event
   handleProjectLeave = () => {
-    // Animate all images to scale 0 (hidden)
     gsap.to(this.$images, { scale: 0.0, ease: "power2.out", duration: 1 });
   };
 
-  // Handle the animation frame updates
   handleTick = () => {
-    // Interpolate the position towards the mouse position for smooth movement
     this.position.x = gsap.utils.interpolate(this.position.x, this.mouse.x, 0.075);
     this.position.y = gsap.utils.interpolate(this.position.y, this.mouse.y, 0.075);
 
-    // If an image is being animated, update its position
     if (this.image) {
       gsap.set(this.image, { x: this.position.x, y: this.position.y });
     }
   };
 
-  // Handle mouse move event
   handleMouseMove = (event) => {
-    // Update mouse coordinates with the current mouse position
     this.mouse.x = event.clientX;
     this.mouse.y = event.clientY;
   };
 }
 
-// Instantiate the Application class to run the code
-new Application();
+class Factory {
+  constructor(config = {}) {
+    this.$element = config.element;
+    this.types = config.types;
+    this.components = this.getComponents();
+  }
+
+  getComponents() {
+    const $elements = gsap.utils.toArray(this.$element.querySelectorAll("[data-component]"));
+    return $elements.reduce((components, $element) => {
+      const id = $element.dataset.id;
+      const type = $element.dataset.component;
+      const component = new this.types[type]({ id: id, type, element: $element });
+      components[id] = component;
+      return components;
+    }, {});
+  }
+}
+
+class Parallax {
+  constructor(config = {}) {
+    this.id = config.id;
+    this.$element = config.element;
+    this.$image = this.$element.querySelector("[data-select='parallax-image']");
+    gsap.fromTo(this.$image, { yPercent: -50 }, { yPercent: 50, duration: 1.0, ease: "none", scrollTrigger: { trigger: this.$element, scrub: true } });
+  }
+}
 
 // ----------------------------LANDING PAGE ANIMATIONS --------------------------------
 document.addEventListener("DOMContentLoaded", () => {
@@ -81,8 +90,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const underline = document.querySelector(".underline");
   const navLinks = document.querySelectorAll("nav a");
   const playgroundImg = document.querySelectorAll(".playground img");
+  const arrowTop = document.querySelector('.arrow-top');
+  const backToTopButton = document.getElementById('back-to-top');
 
-  // Add event listeners to each nav link
   navLinks.forEach(link => {
     link.addEventListener("mouseenter", () => {
       gsap.to(underline, { width: link.offsetWidth, left: link.offsetLeft, duration: 0.5, ease: "power2.out" });
@@ -94,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const tl = gsap.timeline();
-  tl.set(document.querySelector(".main-body"), { alpha: 1 })
+  tl.set(document.querySelector(".main-body"), { alpha: 1 });
 
   tl.from(headlineNames, {
     y: 50,
@@ -124,28 +134,14 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 2,
   });
 
-  const playgroundTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "power2-out" });
-  playgroundTl.to(playgroundImg, {
-    rotation: 5,
-    duration: 2,
-  })
- 
-});
-
-
-// -----------------------SCROLL TO SECTIONS---------------------------
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
-gsap.registerPlugin(ScrollToPlugin);
-document.addEventListener("DOMContentLoaded", () => {
-
+  // -----------------------SCROLL TO SECTIONS---------------------------
   const smoothScrollTo = (target) => {
     gsap.to(window, {
       scrollTo: {
         y: target,
-        autoKill: false 
+        autoKill: false
       },
-      duration: 2, 
+      duration: 2,
       ease: "power2.out"
     });
   };
@@ -160,14 +156,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-});
 
-
-// ------------------BACK TO TOP BUTTON ----------------------------
-document.addEventListener('DOMContentLoaded', () => {
-  const backToTopButton = document.getElementById('back-to-top');
-  const arrow = document.querySelector('.arrow-top');
-
+  // ------------------BACK TO TOP BUTTON ----------------------------
   backToTopButton.addEventListener('click', () => {
     gsap.to(window, {
       duration: 4,
@@ -176,11 +166,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const arrowTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "sine.inOut" });
-  arrowTl.to(arrow, {
+  const arrowTopTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "sine.inOut" });
+  arrowTopTl.to(arrowTop, {
     y: -10,
     duration: 1.2,
   });
+
+  new Application();
+  new Factory({
+    element: document.body,
+    types: {
+      parallax: Parallax,
+    },
+  });
+
 });
-
-
