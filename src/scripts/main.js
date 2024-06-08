@@ -146,20 +146,20 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   gsap.utils.toArray('.header-title').forEach(element => {
-  gsap.fromTo(element,
-    { opacity: 0, y: -50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: element,
-        start: "top 95%",
-        toggleActions: "play reverse play reverse",
+    gsap.fromTo(element,
+      { opacity: 0, y: -50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 95%",
+          toggleActions: "play reverse play reverse",
 
+        }
       }
-    }
-  );
+    );
   })
 
   const arrowTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "sine.inOut" });
@@ -186,16 +186,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  document.querySelectorAll("nav a").forEach((link) => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      const targetId = link.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        smoothScrollTo(targetElement);
-      }
+  if (!window.location.pathname.includes("project")) {
+    document.querySelectorAll("nav a").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const targetId = link.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          smoothScrollTo(targetElement);
+        }
+      });
     });
-  });
+  }
 
   // ------------------BACK TO TOP BUTTON ----------------------------
   backToTopButton.addEventListener('click', () => {

@@ -135,7 +135,8 @@ nav a {
   font-size: calc(16.8 * var(--scale));
 }
 
-.header, .header-title {
+.header,
+.header-title {
   font-family: var(--header-font);
   font-size: calc(175 * var(--scale)) !important;
   letter-spacing: calc(-10 * var(--scale));
@@ -442,12 +443,13 @@ nav a {
 }
 
 .project-about .description {
-  margin-top: calc(100 * var(--scale));
+  margin-top: calc(180 * var(--scale));
   margin-left: calc(140 * var(--scale));
   width: 72%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  padding-bottom: 5%;
 }
 
 .project-about .description>div {
@@ -473,6 +475,44 @@ nav a {
   text-indent: calc(175 * var(--scale));
 }
 
+.section-footer{
+  min-height: 40vh;
+  margin-top: calc(200 * var(--scale));
+}
+
+.next-project {
+  margin-inline: auto;
+  width: 93%;
+}
+
+.next-project>div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.next-project-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 200px;
+  padding-top: 40px;
+}
+
+.next-project-handle a, #next-placeholder {
+  text-decoration: underline;
+  font-size: calc(14 * var(--scale));
+  line-height: 1.5;
+  font-weight: 500;
+
+}
+
+.next-project-handle img {
+  position: absolute;
+  z-index: -1;
+  width: 25%;
+}
+
 .description-gallery {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -496,7 +536,6 @@ nav a {
   position: fixed;
   top: calc(-200 * var(--scale));
   left: calc(-300 * var(--scale));
-
   width: calc(800 * var(--scale));
   height: calc(444 * var(--scale));
   pointer-events: none;
@@ -527,17 +566,17 @@ nav a {
 /*---------------------- Parallax Section----------------------- */
 .parallax {
   position: relative;
-  height: 100vh; 
+  height: 100vh;
   overflow: hidden;
 }
 
 .content__list {
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
 .content__item {
-  height: 100%; 
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -546,5 +585,5 @@ nav a {
 .content__image {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }

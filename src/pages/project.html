@@ -11,7 +11,7 @@
   <title>Projects</title>
 </head>
 
-<body onload="updateProjectHTML()" id="project-body">
+<body id="project-body">
   <a href="/" class="back-button">Back to home</a>
   <nav>
     <a href="/index.html#projects-page">Projects</a>
@@ -46,7 +46,13 @@
       </ul>
     </div>
   </section>
-  <section data-select="project-parallax"></section>
+  <section class="parallax">
+    <div class="content__list">
+      <div class="content__item" data-component="parallax" data-id="parallax-1">
+        <img src="" class="content__image" alt="" data-select="parallax-image" />
+      </div>
+    </div>
+  </section>
   <section class="project-about" data-select="project-about" data-id="1">
     <div class="description" data-select="description" data-id="1">
       <div class="about-title">
@@ -60,7 +66,6 @@
       <img />
     </div>
   </section>
-  <section data-select="project-paralax"></section>
   <section class="project-about" data-select="project-about" data-id="2">
     <div class="description" data-select="description" data-id="2">
       <div class="about-title">
@@ -69,12 +74,14 @@
       </div>
       <p data-select="body" data-id="2"></p>
     </div>
-    <div class="description-gallery" data-select="gallery" data-id="2">
-      <img />
-      <img />
-    </div>
+    <section class="parallax">
+      <div class="content__list">
+        <div class="content__item" data-component="parallax" data-id="parallax-2">
+          <img src="" class="content__image" alt="" data-select="parallax-image" />
+        </div>
+      </div>
+    </section>
   </section>
-  <section data-select="project-paralax"></section>
   <section class="project-about" data-select="project-about" data-id="3">
     <div class="description" data-select="description" data-id="3">
       <div class="about-title">
@@ -83,7 +90,29 @@
       </div>
       <p data-select="body" data-id="3"></p>
     </div>
-    <section data-select="project-paralax"></section>
+    <div class="description-gallery" data-select="gallery" data-id="2">
+      <img />
+      <img />
+    </div>
+  </section>
+  <section class="section-footer">
+    <div class="next-project">
+      <p id="next-placeholder">Next:</p>
+      <div>
+        <p class="header"></p>
+        <div class="next-project-handle">
+          <img src="/assets/circle-playground.svg" />
+          <a href="" class="next-project-a">Explore Project</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Website By Nikoleta Dimitrova All rights reserved ©2024</p>
+      <div id="back-to-top">
+        <p>Return<br> to top</p>
+        <img class="arrow-top" src="/assets/arrow-landing.svg" alt="" />
+      </div>
+    </div>
   </section>
 </body>
 
