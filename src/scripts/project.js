@@ -35,29 +35,29 @@ const projectArr = [
         "name": "Stormy",
         "scriptLetter": ["o"],
         "tags": ["Branding", "Concepting", "Prototyping"],
-        "description": "Cool project yesssssssssssss",
-        "expertise": [],
-        "techUsed": [],
-        "roleInProject": [],
-        "parallax": "../../public/assets/parallax-placeholder.png",
+        "description": "A weather app for students",
+        "expertise": ["Branding", "Concepting", "Prototyping"],
+        "techUsed": ["Adobe XD", "Adobe Illustrator"],
+        "roleInProject": ["Lead Designer"],
+        "parallax": "../../public/assets/parallax1-placeholder.png",
         "bodyParagraphs": [
             {
                 "title": "About Project",
-                "body": "An app about helping students take care of their plants. It will give them detailed information about their plant's needs and will help them keep their plants alive. <br /> <br /> They can scan their plants using their camera and the app will show them information about the moisture it needs, sunlight levels, soil quality, and room temperature.",
+                "body": "The app that we created aims to help people become more aware of upcoming weather by providing real-time weather updates, warnings, and alerts, allowing users to make informed decisions about their activities and travel plans.",
                 "isParallax": false,
-                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
+                "images": ["../../public/assets/photo1-placeholder.png", "../../public/assets/photo2-placeholder.png"]
             },
             {
                 "title": "Main Problem",
-                "body": "A lot of people are not being able to take care of their plants properly, do not understand their needs which leads to them dying our of unproper care.",
+                "body": "The challenge posed by rain and unexpected weather changes can lead to safety risks and disruption in people's daily activities especially when it comes to commuting, traveling, and running errands.",
                 "isParallax": true,
-                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
+                "images": ["../../public/assets/parallax2-placeholder.png"]
             },
             {
                 "title": "Results",
-                "body": "The FlorryBelle App will give the students access to detailed information, moisture and sunlight levels, soil quality and room temperature. This can all happen with the help of a monitoring device placed directly in their plant pot. <br><br> The app and device will help them keep their plants alive and taking proper care of them. The monitoring device will also have watering function that is going to be very useful for the students that go back home frequently and leave their plants alone. They will be able to water their plants with just a few clicks in the app.",
+                "body": "The Stormy app provides users with real-time updates, weather alerts, and tips on how to prepare for different weather conditions. It helps users plan their activities and travel safely by integrating weather data with navigation systems to suggest the safest and most efficient routes based on current weather conditions.",
                 "isParallax": false,
-                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
+                "images": ["../../public/assets/photo3-placeholder.png", "../../public/assets/photo4-placeholder.png"]
             }
         ]
     },
@@ -71,24 +71,25 @@ const projectArr = [
         "expertise": ["Prototyping", "Development", "Research", "Concepting"],
         "techUsed": ["Adobe XD", "Adobe Illustrator", "Adobe InDesign", "HTML, CSS, JS"],
         "roleInProject": ["Lead Designer", "Developer"],
+        "parallax": "../../public/assets/parallax1-placeholder.png",
         "bodyParagraphs": [
             {
                 "title": "About Project",
                 "body": "PaveMind is an educational website for students where they can not only help each other with burnout and mental health but also find tips and tricks on how to cope with it, become more aware of the problem, and learn new things about the topic.",
-                "isParallax": true,
-                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
+                "isParallax": false,
+                "images": ["../../public/assets/photo1-placeholder.png", "../../public/assets/photo2-placeholder.png"]
             },
             {
                 "title": "Main Problem",
                 "body": "A large portion of people are suffering from mental health issues daily. The numbers are reaching record rates because of how hectic our daily life has become. People are feeling the effects of overworking themselves and aren't feeling capable of continuing their work as efficiently as they did before.",
                 "isParallax": true,
-                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
+                "images": ["../../public/assets/parallax2-placeholder.png"]
             },
             {
                 "title": "Results",
                 "body": "Our product emphasizes on the following: reliability, student comfort, privacy, community, and professionalism. <br><br> Thanks to our wide user research we were able to precisely create the most proficient solution which is a platform about burnout featuring: a questionnaire, an accurate selection of articles, community, tips, and tricks.",
-                "isParallax": true,
-                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
+                "isParallax": false,
+                "images": ["../../public/assets/photo3-placeholder.png", "../../public/assets/photo4-placeholder.png"]
             }
         ]
     },
@@ -97,39 +98,43 @@ const projectArr = [
         "name": "Ochaya",
         "scriptLetter": ["c"],
         "tags": ["Branding", "Concepting"],
-        "description": "Cool project yesssssssssssss",
-        "parallax": "../../public/assets/parallax-placeholder.png",
-        "expertise": [],
-        "techUsed": [],
-        "roleInProject": [],
+        "description": "Branding for a matcha tea café",
+        "expertise": ["Branding", "Design"],
+        "techUsed": ["Adobe Illustrator", "Photoshop"],
+        "roleInProject": ["Graphic Designer"],
+        "parallax": "../../public/assets/parallax1-placeholder.png",
         "bodyParagraphs": [
             {
                 "title": "About Project",
-                "body": "An app about helping students take care of their plants. It will give them detailed information about their plant's needs and will help them keep their plants alive. <br /> <br /> They can scan their plants using their camera and the app will show them information about the moisture it needs, sunlight levels, soil quality, and room temperature.",
-                "isParallax": true,
-                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
+                "body": "Ochaya is a branding project for a new matcha tea café. The aim was to create a modern and welcoming brand identity that reflects the calm and sophisticated nature of matcha tea. <br /> <br /> The project involved designing the logo, packaging, and promotional materials.",
+                "isParallax": false,
+                "images": ["../../public/assets/photo1-placeholder.png", "../../public/assets/photo2-placeholder.png"]
             },
             {
                 "title": "Main Problem",
-                "body": "A lot of people are not being able to take care of their plants properly, do not understand their needs which leads to them dying our of unproper care.",
+                "body": "Creating a unique brand identity in a saturated market of tea cafés. The challenge was to highlight the unique aspects of matcha and the café's modern aesthetic.",
                 "isParallax": true,
-                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
+                "images": ["../../public/assets/parallax2-placeholder.png"]
             },
             {
                 "title": "Results",
-                "body": "The FlorryBelle App will give the students access to detailed information, moisture and sunlight levels, soil quality and room temperature. This can all happen with the help of a monitoring device placed directly in their plant pot. <br><br> The app and device will help them keep their plants alive and taking proper care of them. The monitoring device will also have watering function that is going to be very useful for the students that go back home frequently and leave their plants alone. They will be able to water their plants with just a few clicks in the app.",
-                "isParallax": true,
-                "images": ["../../public/assets/pavemind-preview.png", "../../public/assets/pavemind-preview.png"]
+                "body": "The Ochaya branding successfully captures the essence of matcha tea and provides a cohesive and appealing visual identity for the café. The designs received positive feedback and helped in establishing a strong brand presence.",
+                "isParallax": false,
+                "images": ["../../public/assets/photo3-placeholder.png", "../../public/assets/photo4-placeholder.png"]
             }
         ]
     }
-]
-
+];
 
 function updateProjectHTML() {
     const queryString = window.location.search;
-    const pid = queryString.replace("?pid=", "")
-    const project = projectArr.find(prj => prj.id.toString() === pid.toString())
+    const pid = queryString.replace("?pid=", "");
+    const project = projectArr.find(prj => prj.id.toString() === pid.toString());
+
+    if (!project) {
+        console.error('Project not found');
+        return;
+    }
 
     // Update the main container
     const container = document.getElementById("project-landing");
@@ -173,53 +178,41 @@ function updateProjectHTML() {
         roleUl.appendChild(li);
     });
 
-    const parallaxSection = document.querySelector('.parallax')
-    const parallax = parallaxSection.querySelector('[data-select=parallax-image]')
-    parallax.src = project.parallax
-
-    // // Clear and update project-paralax section
-    // const firstParalax = document.getElementById("project-paralax");
-    // firstParalax.innerHTML = ''; // Clear the content
+    const parallaxSection = document.querySelector('.parallax');
+    const parallax = parallaxSection.querySelector('[data-select=parallax-image]');
+    parallax.src = project.parallax;
 
     // Update body paragraphs
-    const aboutSections = [...document.querySelectorAll(`[data-select=project-about]`)]
+    const aboutSections = [...document.querySelectorAll(`[data-select=project-about]`)];
     project.bodyParagraphs.forEach((paragraph, index) => {
-
         const sectionAbout = aboutSections[index];
-        const title = sectionAbout.querySelector('[data-select=title]')
+        const title = sectionAbout.querySelector('[data-select=title]');
         title.innerHTML = paragraph.title;
 
-        const description = sectionAbout.querySelector('[data-select=body]')
-        description.innerHTML = paragraph.body
+        const description = sectionAbout.querySelector('[data-select=body]');
+        description.innerHTML = paragraph.body;
 
         if (paragraph.isParallax) {
-            const parallaxImage = sectionAbout.querySelector('[data-select=parallax-image]')
-            parallaxImage.src = paragraph.images[0]
-        }
-        else {
-            const gallery = sectionAbout.querySelector('[data-select=gallery]')
+            const parallaxImage = sectionAbout.querySelector('[data-select=parallax-image]');
+            parallaxImage.src = paragraph.images[0];
+        } else {
+            const gallery = sectionAbout.querySelector('[data-select=gallery]');
             const galleryImages = gallery.querySelectorAll("img");
-            paragraph.images.forEach((image, index) => {
-                galleryImages[index].src = image;
+            paragraph.images.forEach((image, imgIndex) => {
+                galleryImages[imgIndex].src = image;
             });
         }
     });
 
-    let nextProjectId = project.id + 1
-    if(nextProjectId >= projectArr.length) {
-        nextProjectId = 1
-    }
+    let nextProjectId = project.id % projectArr.length + 1;
+    const nextProject = projectArr.find(prj => prj.id === nextProjectId);
 
-    console.log(nextProjectId)
-
-    const nextProject = projectArr.find(prj => prj.id === nextProjectId)
-
-    const nextPrj = document.querySelector('.next-project')
+    const nextPrj = document.querySelector('.next-project');
     const nextPrjHeader = nextPrj.querySelector(".header");
     nextPrjHeader.innerHTML = nextProject.name.replace(nextProject.scriptLetter[0], `<span id="letter-o" class="accent">${nextProject.scriptLetter[0]}</span>`);
 
-    const nextPrjButton = nextPrj.querySelector('.next-project-a')
-    nextPrjButton.href = `/project.html?pid=${nextProjectId}`
+    const nextPrjButton = nextPrj.querySelector('.next-project-a');
+    nextPrjButton.href = `/project.html?pid=${nextProjectId}`;
 }
 
-updateProjectHTML()
+updateProjectHTML();

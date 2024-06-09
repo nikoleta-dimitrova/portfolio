@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --------------------ANIMATED HEADLINES-------------------
   gsap.utils.toArray('.header').forEach(headline => {
     gsap.fromTo(headline,
-      { opacity: 0, transform: 'translateY(50px)' },
+      { opacity: 0, transform: 'translateY(60px)' },
       {
         opacity: 1,
         transform: 'translateY(0px)',
