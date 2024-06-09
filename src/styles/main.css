@@ -412,7 +412,7 @@ nav a {
   rotate: 180deg;
 }
 
-/* Start of Project Details page */
+/* ---------------Start of Project Details page------------------ */
 #project-landing .headline {
   margin-top: calc(100 * var(--scale));
 }
