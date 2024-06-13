@@ -2,7 +2,7 @@ import gsap from "gsap";
 import '../styles/main.css';
 
 import ScrollTrigger from "gsap/ScrollTrigger";
-// import ScrollSmoother from "gsap/ScrollSmoother";
+// import {ScrollSmoother} from "./ScrollSmoother";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sayHi = document.querySelector(".say-hi");
   const scrollLanding = document.querySelector(".scroll-landing");
   const arrow = document.querySelector(".scroll-landing img");
+  const projectArrow = document.querySelector(".explore img");
   const sayHiCircle = document.querySelector(".say-hi img");
   const underline = document.querySelector(".underline");
   const navLinks = document.querySelectorAll("nav a");
@@ -168,6 +169,11 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 1.5,
   });
 
+  arrowTl.to(projectArrow, {
+    y: -15,
+    duration: 1.5,
+  })
+
   const circleTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "power2-out" });
   circleTl.to(sayHiCircle, {
     rotation: 15,
@@ -186,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  if (!window.location.pathname.includes("project")) {
+  if (!window.location.pathname.includes("project") && !window.location.pathname.includes("playground")) {
     document.querySelectorAll("nav a").forEach((link) => {
       link.addEventListener("click", (event) => {
         event.preventDefault();
