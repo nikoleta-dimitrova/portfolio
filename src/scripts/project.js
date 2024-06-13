@@ -1,32 +1,32 @@
 const projectArr = [
     {
-        "id": 1,
-        "name": "FloryBelle",
-        "scriptLetter": ["o"],
-        "tags": ["Prototyping", "Concepting"],
-        "description": "An app about taking care of plants.",
-        "expertise": ["Concepting", "Branding", "Prototyping"],
-        "techUsed": ["Adobe XD", "Adobe Illustrator"],
-        "roleInProject": ["Lead Designer"],
-        "parallax": "../../public/assets/parallax1-placeholder.png",
-        "bodyParagraphs": [
+        id: 1,
+        name: "FloryBelle",
+        scriptLetter: ["o"],
+        tags: ["Prototyping", "Concepting"],
+        description: "An app about taking care of plants.",
+        expertise: ["Concepting", "Branding", "Prototyping"],
+        techUsed: ["Adobe XD", "Adobe Illustrator"],
+        roleInProject: ["Lead Designer"],
+        parallax: '/assets/parallax1-placeholder.png',
+        bodyParagraphs: [
             {
-                "title": "About Project",
-                "body": "An app about helping students take care of their plants. It will give them detailed information about their plant's needs and will help them keep their plants alive. <br /> <br /> They can scan their plants using their camera and the app will show them information about the moisture it needs, sunlight levels, soil quality, and room temperature.",
-                "isParallax": false,
-                "images": ["../../public/assets/photo1-placeholder.png", "../../public/assets/photo2-placeholder.png"]
+                title: "About Project",
+                body: "An app about helping students take care of their plants. It will give them detailed information about their plant's needs and will help them keep their plants alive. <br /> <br /> They can scan their plants using their camera and the app will show them information about the moisture it needs, sunlight levels, soil quality, and room temperature.",
+                isParallax: false,
+                images: ['/assets/photo1-placeholder.png', '/assets/photo2-placeholder.png']
             },
             {
-                "title": "Main Problem",
-                "body": "A lot of people are not being able to take care of their plants properly, do not understand their needs which leads to them dying our of unproper care.",
-                "isParallax": true,
-                "images": ["../../public/assets/parallax2-placeholder.png"]
+                title: "Main Problem",
+                body: "A lot of people are not being able to take care of their plants properly, do not understand their needs which leads to them dying our of unproper care.",
+                isParallax: true,
+                images: ['/assets/parallax2-placeholder.png']
             },
             {
-                "title": "Results",
-                "body": "The FlorryBelle App will give the students access to detailed information, moisture and sunlight levels, soil quality and room temperature. This can all happen with the help of a monitoring device placed directly in their plant pot. <br><br> The app and device will help them keep their plants alive and taking proper care of them. The monitoring device will also have watering function that is going to be very useful for the students that go back home frequently and leave their plants alone. They will be able to water their plants with just a few clicks in the app.",
-                "isParallax": false,
-                "images": ["../../public/assets/photo3-placeholder.png", "../../public/assets/photo4-placeholder.png"]
+                title: "Results",
+                body: "The FlorryBelle App will give the students access to detailed information, moisture and sunlight levels, soil quality and room temperature. This can all happen with the help of a monitoring device placed directly in their plant pot. <br><br> The app and device will help them keep their plants alive and taking proper care of them. The monitoring device will also have watering function that is going to be very useful for the students that go back home frequently and leave their plants alone. They will be able to water their plants with just a few clicks in the app.",
+                isParallax: false,
+                images: ['/assets/photo3-placeholder.png', '/assets/photo4-placeholder.png']
             }
         ]
     },
@@ -39,25 +39,25 @@ const projectArr = [
         "expertise": ["Branding", "Concepting", "Prototyping"],
         "techUsed": ["Adobe XD", "Adobe Illustrator"],
         "roleInProject": ["Lead Designer"],
-        "parallax": "../../public/assets/parallax1-placeholder.png",
+        "parallax": "/assets/parallax1-placeholder.png",
         "bodyParagraphs": [
             {
                 "title": "About Project",
                 "body": "The app that we created aims to help people become more aware of upcoming weather by providing real-time weather updates, warnings, and alerts, allowing users to make informed decisions about their activities and travel plans.",
                 "isParallax": false,
-                "images": ["../../public/assets/photo1-placeholder.png", "../../public/assets/photo2-placeholder.png"]
+                "images": ["/assets/photo1-placeholder.png", "/assets/photo2-placeholder.png"]
             },
             {
                 "title": "Main Problem",
                 "body": "The challenge posed by rain and unexpected weather changes can lead to safety risks and disruption in people's daily activities especially when it comes to commuting, traveling, and running errands.",
                 "isParallax": true,
-                "images": ["../../public/assets/parallax2-placeholder.png"]
+                "images": ["/assets/parallax2-placeholder.png"]
             },
             {
                 "title": "Results",
                 "body": "The Stormy app provides users with real-time updates, weather alerts, and tips on how to prepare for different weather conditions. It helps users plan their activities and travel safely by integrating weather data with navigation systems to suggest the safest and most efficient routes based on current weather conditions.",
                 "isParallax": false,
-                "images": ["../../public/assets/photo3-placeholder.png", "../../public/assets/photo4-placeholder.png"]
+                "images": ["/assets/photo3-placeholder.png", "/assets/photo4-placeholder.png"]
             }
         ]
     },
@@ -71,25 +71,25 @@ const projectArr = [
         "expertise": ["Prototyping", "Development", "Research", "Concepting"],
         "techUsed": ["Adobe XD", "Adobe Illustrator", "Adobe InDesign", "HTML, CSS, JS"],
         "roleInProject": ["Lead Designer", "Developer"],
-        "parallax": "../../public/assets/parallax1-placeholder.png",
+        "parallax": "/assets/parallax1-placeholder.png",
         "bodyParagraphs": [
             {
                 "title": "About Project",
                 "body": "PaveMind is an educational website for students where they can not only help each other with burnout and mental health but also find tips and tricks on how to cope with it, become more aware of the problem, and learn new things about the topic.",
                 "isParallax": false,
-                "images": ["../../public/assets/photo1-placeholder.png", "../../public/assets/photo2-placeholder.png"]
+                "images": ["/assets/photo1-placeholder.png", "/assets/photo2-placeholder.png"]
             },
             {
                 "title": "Main Problem",
                 "body": "A large portion of people are suffering from mental health issues daily. The numbers are reaching record rates because of how hectic our daily life has become. People are feeling the effects of overworking themselves and aren't feeling capable of continuing their work as efficiently as they did before.",
                 "isParallax": true,
-                "images": ["../../public/assets/parallax2-placeholder.png"]
+                "images": ["/assets/parallax2-placeholder.png"]
             },
             {
                 "title": "Results",
                 "body": "Our product emphasizes on the following: reliability, student comfort, privacy, community, and professionalism. <br><br> Thanks to our wide user research we were able to precisely create the most proficient solution which is a platform about burnout featuring: a questionnaire, an accurate selection of articles, community, tips, and tricks.",
                 "isParallax": false,
-                "images": ["../../public/assets/photo3-placeholder.png", "../../public/assets/photo4-placeholder.png"]
+                "images": ["/assets/photo3-placeholder.png", "/assets/photo4-placeholder.png"]
             }
         ]
     },
@@ -102,25 +102,25 @@ const projectArr = [
         "expertise": ["Branding", "Design"],
         "techUsed": ["Adobe Illustrator", "Photoshop"],
         "roleInProject": ["Graphic Designer"],
-        "parallax": "../../public/assets/parallax1-placeholder.png",
+        "parallax": "/assets/parallax1-placeholder.png",
         "bodyParagraphs": [
             {
                 "title": "About Project",
                 "body": "Ochaya is a branding project for a new matcha tea café. The aim was to create a modern and welcoming brand identity that reflects the calm and sophisticated nature of matcha tea. <br /> <br /> The project involved designing the logo, packaging, and promotional materials.",
                 "isParallax": false,
-                "images": ["../../public/assets/photo1-placeholder.png", "../../public/assets/photo2-placeholder.png"]
+                "images": ["/assets/photo1-placeholder.png", "/assets/photo2-placeholder.png"]
             },
             {
                 "title": "Main Problem",
                 "body": "Creating a unique brand identity in a saturated market of tea cafés. The challenge was to highlight the unique aspects of matcha and the café's modern aesthetic.",
                 "isParallax": true,
-                "images": ["../../public/assets/parallax2-placeholder.png"]
+                "images": ["/assets/parallax2-placeholder.png"]
             },
             {
                 "title": "Results",
                 "body": "The Ochaya branding successfully captures the essence of matcha tea and provides a cohesive and appealing visual identity for the café. The designs received positive feedback and helped in establishing a strong brand presence.",
                 "isParallax": false,
-                "images": ["../../public/assets/photo3-placeholder.png", "../../public/assets/photo4-placeholder.png"]
+                "images": ["/assets/photo3-placeholder.png", "/assets/photo4-placeholder.png"]
             }
         ]
     }
