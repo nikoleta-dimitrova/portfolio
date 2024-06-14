@@ -1,32 +1,32 @@
 const projectArr = [
     {
-        id: 1,
-        name: "FloryBelle",
-        scriptLetter: ["o"],
-        tags: ["Prototyping", "Concepting"],
-        description: "An app about taking care of plants.",
-        expertise: ["Concepting", "Branding", "Prototyping"],
-        techUsed: ["Adobe XD", "Adobe Illustrator"],
-        roleInProject: ["Lead Designer"],
-        parallax: '/assets/parallax1-placeholder.png',
-        bodyParagraphs: [
+        "id": 1,
+        "name": "FloryBelle",
+        "scriptLetter": ["o"],
+        "tags": ["Prototyping", "Concepting"],
+        "description": "An app about taking care of plants.",
+        "expertise": ["Concepting", "Branding", "Prototyping"],
+        "techUsed": ["Adobe XD", "Adobe Illustrator"],
+        "roleInProject": ["Lead Designer"],
+        "parallax": '/assets/parallax1-placeholder.png',
+        "bodyParagraphs": [
             {
-                title: "About Project",
-                body: "An app about helping students take care of their plants. It will give them detailed information about their plant's needs and will help them keep their plants alive. <br /> <br /> They can scan their plants using their camera and the app will show them information about the moisture it needs, sunlight levels, soil quality, and room temperature.",
-                isParallax: false,
-                images: ['/assets/photo1-placeholder.png', '/assets/photo2-placeholder.png']
+                "title": "About Project",
+                "body": "An app about helping students take care of their plants. It will give them detailed information about their plant's needs and will help them keep their plants alive. <br /> <br /> They can scan their plants using their camera and the app will show them information about the moisture it needs, sunlight levels, soil quality, and room temperature.",
+                "isParallax": false,
+                "images": ['/assets/photo1-placeholder.png', '/assets/photo2-placeholder.png']
             },
             {
-                title: "Main Problem",
-                body: "A lot of people are not being able to take care of their plants properly, do not understand their needs which leads to them dying our of unproper care.",
-                isParallax: true,
-                images: ['/assets/parallax2-placeholder.png']
+                "title": "Main Problem",
+                "body": "A lot of people are not being able to take care of their plants properly, do not understand their needs which leads to them dying our of unproper care.",
+                "isParallax": true,
+                "images": ['/assets/parallax2-placeholder.png']
             },
             {
-                title: "Results",
-                body: "The FlorryBelle App will give the students access to detailed information, moisture and sunlight levels, soil quality and room temperature. This can all happen with the help of a monitoring device placed directly in their plant pot. <br><br> The app and device will help them keep their plants alive and taking proper care of them. The monitoring device will also have watering function that is going to be very useful for the students that go back home frequently and leave their plants alone. They will be able to water their plants with just a few clicks in the app.",
-                isParallax: false,
-                images: ['/assets/photo3-placeholder.png', '/assets/photo4-placeholder.png']
+                "title": "Results",
+                "body": "The FlorryBelle App will give the students access to detailed information, moisture and sunlight levels, soil quality and room temperature. This can all happen with the help of a monitoring device placed directly in their plant pot. <br><br> The app and device will help them keep their plants alive and taking proper care of them. The monitoring device will also have watering function that is going to be very useful for the students that go back home frequently and leave their plants alone. They will be able to water their plants with just a few clicks in the app.",
+                "isParallax": false,
+                "images": ['/assets/photo3-placeholder.png', '/assets/photo4-placeholder.png']
             }
         ]
     },
