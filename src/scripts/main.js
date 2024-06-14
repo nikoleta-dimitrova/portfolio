@@ -1,13 +1,27 @@
 import gsap from "gsap";
 import '../styles/main.css';
+import Lenis from 'lenis';
 
 import ScrollTrigger from "gsap/ScrollTrigger";
-// import {ScrollSmoother} from "./ScrollSmoother";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-// WITH STAN's HELP FOR THE HOVER EFFECT
+// ------------------Initialize Lenis for smooth scrolling------------------------
+const lenis = new Lenis({
+  duration: 1.5,
+  easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+  smooth: true
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+// ------------------------Hover cards effect----------------------------------------
 class Application {
   constructor() {
     this.mouse = { x: 0, y: 0 };
@@ -71,6 +85,7 @@ class Factory {
   }
 }
 
+// ------------------------------Parallax Sections-------------------------------------
 class Parallax {
   constructor(config = {}) {
     this.id = config.id;
@@ -80,6 +95,8 @@ class Parallax {
   }
 }
 
+
+// ----------------------------------Animating Elements--------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector("nav");
   const description = document.querySelector(".description");
@@ -99,12 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const myPhoto = document.querySelector(".photo");
   const numberProjects = document.getElementById("circle-number-projects");
   const circlePlayground = document.getElementById("circle-playground");
-
-  // ScrollSmoother.create({
-  //   smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
-  //   effects: true, // looks for data-speed and data-lag attributes on elements
-  //   smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-  // });
 
   navLinks.forEach(link => {
     link.addEventListener("mouseenter", () => {
