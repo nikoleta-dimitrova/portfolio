@@ -70,21 +70,18 @@ section {
   background-color: #e2e4d5;
 }
 
-.back-button {
-  font-size: calc(14 * var(--scale));
-  display: flex;
+.back-button-container {
   position: fixed;
   top: calc(38 * var(--scale));
   left: calc(45 * var(--scale));
-  gap: 0.25rem;
   z-index: 20;
-  border-bottom: 1px solid transparent;
-  transition: border-bottom 0.3s ease;
-  font-weight: 500;
 }
 
-.back-button:hover {
-  border-bottom: 1px solid #272727;
+#back-button {
+  font-size: calc(14 * var(--scale));
+  display: flex;
+  gap: 0.25rem;
+  font-weight: 500;
 }
 
 nav {
@@ -103,7 +100,8 @@ nav a {
   font-weight: 500;
 }
 
-.underline {
+.underline,
+.back-underline {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -624,7 +622,8 @@ nav a {
 .playground-container img {
   width: 100%;
   margin-bottom: 20px;
-  background-color: #ff0000; /* Placeholder for missing image */
+  background-color: #ff0000;
+  /* Placeholder for missing image */
 }
 
 .playground-container p {

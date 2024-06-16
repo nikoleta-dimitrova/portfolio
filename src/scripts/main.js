@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 // ------------------Initialize Lenis for smooth scrolling------------------------
 const lenis = new Lenis({
   duration: 1.5,
-  easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+  easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   smooth: true
 });
 
@@ -106,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectArrow = document.querySelector(".explore img");
   const sayHiCircle = document.querySelector(".say-hi img");
   const underline = document.querySelector(".underline");
+  const backUnderline = document.querySelector(".back-underline");
   const navLinks = document.querySelectorAll("nav a");
   const arrowTop = document.querySelector('.arrow-top');
   const backToTopButton = document.getElementById('back-to-top');
@@ -116,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const myPhoto = document.querySelector(".photo");
   const numberProjects = document.getElementById("circle-number-projects");
   const circlePlayground = document.getElementById("circle-playground");
+  const backButton = document.getElementById("back-button")
 
   navLinks.forEach(link => {
     link.addEventListener("mouseenter", () => {
@@ -126,6 +128,17 @@ document.addEventListener("DOMContentLoaded", () => {
       gsap.to(underline, { width: 0, duration: 0.5, ease: "power2.out" });
     });
   });
+
+
+  if (backButton) {
+    backButton.addEventListener("mouseenter", () => {
+      gsap.to(backUnderline, { width: backButton.offsetWidth, left: backButton.offsetLeft, duration: 0.5, ease: "power2.out" });
+    });
+
+    backButton.addEventListener("mouseleave", () => {
+      gsap.to(backUnderline, { width: 0, duration: 0.5, ease: "power2.out" });
+    });
+  }
 
   gsap.set(document.querySelector("body"), { alpha: 1 });
 
@@ -181,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
     yoyo: true,
     ease: "sine.inOut",
   });
-  
+
   gsap.to(projectArrow, {
     y: -15,
     duration: 1.5,
@@ -189,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
     yoyo: true,
     ease: "sine.inOut",
   });
-  
+
   gsap.to(sayHiCircle, {
     rotation: 15,
     duration: 1.5,
@@ -197,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
     yoyo: true,
     ease: "sine.inOut",
   });
-  
+
 
   // -----------------------SCROLL TO SECTIONS---------------------------
   const smoothScrollTo = (target) => {
