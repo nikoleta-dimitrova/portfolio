@@ -522,7 +522,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 
+// -----------------------------PLAYGROUND PAGE---------------------------
+gsap.utils.toArray('.playground-grid').forEach(playground => {
+  gsap.fromTo(playground,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: playground,
+        start: "top 90%",
+        toggleActions: "play reverse play reverse",
+        markers: true
 
+      }
+    }
+  );
+});
 
 
 
