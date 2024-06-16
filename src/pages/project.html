@@ -5,122 +5,129 @@
   <meta charset="UTF-8" />
   <link rel="icon" href="/public/assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preload" href="https://fonts.googleapis.com">
+  <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="/src/styles/main.css" />
   <script src="/src/scripts/main.js" type="module"></script>
   <script src="/src/scripts/project.js" type="module"></script>
   <title>Projects</title>
 </head>
 
-<body id="project-body">
-  <div class="back-button-container">
-    <a href="/" id="back-button">Back to home</a>
-    <div class="back-underline"></div>
-  </div>
-  <nav>
-    <a href="/index.html#projects-page">Projects</a>
-    <span>/</span>
-    <a href="/index.html#about-page">About</a>
-    <span>/</span>
-    <a href="/index.html#contact-page">Contact</a>
-    <div class="underline"></div>
-  </nav>
-  <section id="project-landing">
-    <div class="headline">
-      <div>
-        <p class="header"></p>
-        <p class="description"></p>
+<body id="project-body" data-barba="wrapper">
+  <main data-barba="container" data-barba-namespace="project">
+    <div class="back-button-container">
+      <a href="/" id="back-button">Back to home</a>
+      <div class="back-underline"></div>
+    </div>
+    <nav>
+      <a href="/index.html#projects-page">Projects</a>
+      <span>/</span>
+      <a href="/index.html#about-page">About</a>
+      <span>/</span>
+      <a href="/index.html#contact-page">Contact</a>
+      <div class="underline"></div>
+    </nav>
+    <section id="project-landing">
+      <div class="headline">
+        <div>
+          <p class="header"></p>
+          <p class="description"></p>
+        </div>
       </div>
-    </div>
-    <div class="project-information">
-      <ul>
-        <p></p>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <ul>
-        <p></p>
-        <li></li>
-        <li></li>
-      </ul>
-      <ul>
-        <p></p>
-        <li></li>
-      </ul>
-    </div>
-    <div class="explore">
-      <p>Scroll to explore</p>
-      <img src="../../public/assets/arrow-landing.svg"/>
-    </div>
-  </section>
-  <section class="parallax">
-    <div class="content__list">
-      <div class="content__item" data-component="parallax" data-id="parallax-1">
-        <img src="" class="content__image" alt="" data-select="parallax-image" />
+      <div class="project-information">
+        <ul>
+          <p></p>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul>
+          <p></p>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul>
+          <p></p>
+          <li></li>
+        </ul>
       </div>
-    </div>
-  </section>
-  <section class="project-about" data-select="project-about" data-id="1">
-    <div class="description" data-select="description" data-id="1">
-      <div class="about-title">
-        <img src="./assets/opened-project-circle.svg" />
-        <p data-select="title" data-id="1"></p>
+      <div class="explore">
+        <p>Scroll to explore</p>
+        <img src="../../public/assets/arrow-landing.svg" />
       </div>
-      <p data-select="body" data-id="1"></p>
-    </div>
-    <div class="description-gallery" data-select="gallery" data-id="1">
-      <img />
-      <img />
-    </div>
-  </section>
-  <section class="project-about" data-select="project-about" data-id="2">
-    <div id="main-problem" class="description" data-select="description" data-id="2">
-      <div class="about-title">
-        <img src="./assets/opened-project-circle.svg" />
-        <p data-select="title" data-id="2"></p>
-      </div>
-      <p data-select="body" data-id="2"></p>
-    </div>
+    </section>
     <section class="parallax">
       <div class="content__list">
-        <div class="content__item" data-component="parallax" data-id="parallax-2">
+        <div class="content__item" data-component="parallax" data-id="parallax-1">
           <img src="" class="content__image" alt="" data-select="parallax-image" />
         </div>
       </div>
     </section>
-  </section>
-  <section class="project-about" data-select="project-about" data-id="3">
-    <div class="description" data-select="description" data-id="3">
-      <div class="about-title">
-        <img src="./assets/opened-project-circle.svg" />
-        <p data-select="title" data-id="3"></p>
+    <section class="project-about" data-select="project-about" data-id="1">
+      <div class="description" data-select="description" data-id="1">
+        <div class="about-title">
+          <img src="./assets/opened-project-circle.svg" />
+          <p data-select="title" data-id="1"></p>
+        </div>
+        <p data-select="body" data-id="1"></p>
       </div>
-      <p data-select="body" data-id="3"></p>
-    </div>
-    <div class="description-gallery" data-select="gallery" data-id="2">
-      <img />
-      <img />
-    </div>
-  </section>
-  <section class="section-footer">
-    <div class="next-project">
-      <p id="next-placeholder">Next:</p>
-      <div>
-        <p class="header"></p>
-        <div class="next-project-handle">
-          <img src="/assets/circle-playground.svg" />
-          <a href="" class="next-project-a">Explore Project</a>
+      <div class="description-gallery" data-select="gallery" data-id="1">
+        <img />
+        <img />
+      </div>
+    </section>
+    <section class="project-about" data-select="project-about" data-id="2">
+      <div id="main-problem" class="description" data-select="description" data-id="2">
+        <div class="about-title">
+          <img src="./assets/opened-project-circle.svg" />
+          <p data-select="title" data-id="2"></p>
+        </div>
+        <p data-select="body" data-id="2"></p>
+      </div>
+      <section class="parallax">
+        <div class="content__list">
+          <div class="content__item" data-component="parallax" data-id="parallax-2">
+            <img src="" class="content__image" alt="" data-select="parallax-image" />
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="project-about" data-select="project-about" data-id="3">
+      <div class="description" data-select="description" data-id="3">
+        <div class="about-title">
+          <img src="./assets/opened-project-circle.svg" />
+          <p data-select="title" data-id="3"></p>
+        </div>
+        <p data-select="body" data-id="3"></p>
+      </div>
+      <div class="description-gallery" data-select="gallery" data-id="2">
+        <img />
+        <img />
+      </div>
+    </section>
+    <section class="section-footer">
+      <div class="next-project">
+        <p id="next-placeholder">Next:</p>
+        <div>
+          <p class="header"></p>
+          <div class="next-project-handle">
+            <img src="/assets/circle-playground.svg" />
+            <a href="" class="next-project-a">Explore Project</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
-      <p>Website By Nikoleta Dimitrova All rights reserved ©2024</p>
-      <div id="back-to-top">
-        <p>Return<br> to top</p>
-        <img class="arrow-top" src="/assets/arrow-landing.svg" alt="" />
+      <div class="footer">
+        <p>Website By Nikoleta Dimitrova All rights reserved ©2024</p>
+        <div id="back-to-top">
+          <p>Return<br> to top</p>
+          <img class="arrow-top" src="/assets/arrow-landing.svg" alt="" />
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 </body>
 
 </html>

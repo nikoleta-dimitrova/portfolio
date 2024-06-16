@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Inspiration&family=Questrial&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-
 @font-face {
   font-family: "The Seasons";
   src: url("/public/assets/Demo_Fonts/Fontspring-DEMO-theseasons-bd.otf");
+  font-display: swap;
 }
 
 /* 375 is the size of your mobile design width */
@@ -146,7 +144,6 @@ nav a {
   font-weight: 200;
   margin-inline: 0.3rem;
   margin-top: calc(40 * var(--scale));
-
 }
 
 /* Fixing handwritten letters sizes */
