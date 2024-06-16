@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  gsap.set(document.querySelector(".main-body"), { alpha: 1 });
+  gsap.set(document.querySelector("body"), { alpha: 1 });
 
   gsap.from([nav], {
     transform: 'translateY(-50px)',
@@ -174,22 +174,30 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   })
 
-  const arrowTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "sine.inOut" });
-  arrowTl.to(arrow, {
+  gsap.to(arrow, {
     y: -15,
     duration: 1.5,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
   });
-
-  arrowTl.to(projectArrow, {
+  
+  gsap.to(projectArrow, {
     y: -15,
     duration: 1.5,
-  })
-
-  const circleTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "power2-out" });
-  circleTl.to(sayHiCircle, {
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+  });
+  
+  gsap.to(sayHiCircle, {
     rotation: 15,
-    duration: 2,
+    duration: 1.5,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
   });
+  
 
   // -----------------------SCROLL TO SECTIONS---------------------------
   const smoothScrollTo = (target) => {
@@ -225,10 +233,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const arrowTopTl = gsap.timeline({ repeat: -1, yoyo: true, ease: "sine.inOut" });
-  arrowTopTl.to(arrowTop, {
-    y: -10,
-    duration: 1.2,
+  gsap.to(arrowTop, {
+    y: -15,
+    duration: 1.5,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
   });
 
 
