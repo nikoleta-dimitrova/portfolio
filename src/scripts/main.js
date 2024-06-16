@@ -7,7 +7,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-// ------------------Initialize Lenis for smooth scrolling------------------------
+// ------------------LENIS FOR SMOOTH SCROLLING------------------------
 const lenis = new Lenis({
   duration: 1.5,
   easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -21,7 +21,7 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-// ------------------------Hover cards effect----------------------------------------
+// ------------------------HOVER CARD ANIMATION----------------------------------------
 class Application {
   constructor() {
     this.mouse = { x: 0, y: 0 };
@@ -85,7 +85,7 @@ class Factory {
   }
 }
 
-// ------------------------------Parallax Sections-------------------------------------
+// ------------------------------PARALLAX SECTIONS-------------------------------------
 class Parallax {
   constructor(config = {}) {
     this.id = config.id;
@@ -96,7 +96,7 @@ class Parallax {
 }
 
 
-// ----------------------------------Animating Elements--------------------------------------
+// ----------------------------------ANIMATING ELEMENTS--------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector("nav");
   const description = document.querySelector(".description");
@@ -154,8 +154,68 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.1,
   }, "-=0.8");
 
-  // -----------------------LANDING SCREEN---------------------------
-  gsap.utils.toArray([sayHi, description, scrollLanding]).forEach(element => {
+  // -----------------------SCROLL TO SECTIONS---------------------------
+  const smoothScrollTo = (target) => {
+    gsap.to(window, {
+      scrollTo: {
+        y: target,
+        autoKill: false
+      },
+      duration: 2,
+      ease: "power2.out"
+    });
+  };
+
+  if (!window.location.pathname.includes("project") && !window.location.pathname.includes("playground")) {
+    document.querySelectorAll("nav a").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const targetId = link.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          smoothScrollTo(targetElement);
+        }
+      });
+    });
+  }
+
+  // -------------------------BACK TO TOP BUTTON ----------------------------
+  backToTopButton.addEventListener('click', () => {
+    gsap.to(window, {
+      duration: 4,
+      scrollTo: { y: 0, autoKill: true },
+      ease: "power4.out"
+    });
+  });
+
+  gsap.to(arrowTop, {
+    y: -15,
+    duration: 1.5,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+  });
+
+
+  // ------------------------ANIMATED HEADLINES-----------------------
+  gsap.utils.toArray('.header').forEach(headline => {
+    gsap.fromTo(headline,
+      { opacity: 0, transform: 'translateY(60px)' },
+      {
+        opacity: 1,
+        transform: 'translateY(0px)',
+        duration: 1,
+        scrollTrigger: {
+          trigger: headline,
+          start: "top 95%",
+          toggleActions: "play reverse play reverse",
+        }
+      }
+    );
+  });
+
+   // -----------------------LANDING SCREEN ANIMATIONS-------------------------------
+   gsap.utils.toArray([sayHi, description, scrollLanding]).forEach(element => {
     gsap.fromTo(element,
       { opacity: 0, y: 50 },
       {
@@ -216,67 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  // -----------------------SCROLL TO SECTIONS---------------------------
-  const smoothScrollTo = (target) => {
-    gsap.to(window, {
-      scrollTo: {
-        y: target,
-        autoKill: false
-      },
-      duration: 2,
-      ease: "power2.out"
-    });
-  };
-
-  if (!window.location.pathname.includes("project") && !window.location.pathname.includes("playground")) {
-    document.querySelectorAll("nav a").forEach((link) => {
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-        const targetId = link.getAttribute("href");
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          smoothScrollTo(targetElement);
-        }
-      });
-    });
-  }
-
-  // ------------------BACK TO TOP BUTTON ----------------------------
-  backToTopButton.addEventListener('click', () => {
-    gsap.to(window, {
-      duration: 4,
-      scrollTo: { y: 0, autoKill: true },
-      ease: "power4.out"
-    });
-  });
-
-  gsap.to(arrowTop, {
-    y: -15,
-    duration: 1.5,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut",
-  });
-
-
-  // --------------------ANIMATED HEADLINES-------------------
-  gsap.utils.toArray('.header').forEach(headline => {
-    gsap.fromTo(headline,
-      { opacity: 0, transform: 'translateY(60px)' },
-      {
-        opacity: 1,
-        transform: 'translateY(0px)',
-        duration: 1,
-        scrollTrigger: {
-          trigger: headline,
-          start: "top 95%",
-          toggleActions: "play reverse play reverse",
-        }
-      }
-    );
-  });
-
-  // --------------------PROJECT SECTION---------------------
+  // ------------------------PROJECT SECTION ANIMATIONS --------------------------
   gsap.utils.toArray('.project-tag').forEach(tag => {
     gsap.fromTo(tag,
       { opacity: 0, y: 50 },
@@ -339,7 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 
-  // --------------------ABOUT ME SECTION-------------------
+  // ------------------------ABOUT ME SECTION ANIMATIONS-------------------------
   gsap.fromTo(aboutMe,
     { opacity: 0, y: 50 },
     {
@@ -384,7 +384,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 
-  // --------------------CONTACT SECTION-------------------
+  // -------------------------CONTACT SECTION ANIMATIONS--------------------------
   gsap.fromTo(contactQuestion,
     { opacity: 0, y: 50 },
     {
@@ -485,8 +485,6 @@ document.addEventListener("DOMContentLoaded", () => {
           trigger: gallery,
           start: "top 70%",
           toggleActions: "play reverse play reverse",
-          markers: true
-
         }
       }
     );
@@ -522,7 +520,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 
-// -----------------------------PLAYGROUND PAGE---------------------------
+// -----------------------------PLAYGROUND PAGE ANIMATIONS---------------------------
 gsap.utils.toArray('.playground-grid').forEach(playground => {
   gsap.fromTo(playground,
     { opacity: 0, y: 50 },
@@ -534,15 +532,10 @@ gsap.utils.toArray('.playground-grid').forEach(playground => {
         trigger: playground,
         start: "top 90%",
         toggleActions: "play reverse play reverse",
-        markers: true
-
       }
     }
   );
 });
-
-
-
 
   new Application();
   new Factory({
