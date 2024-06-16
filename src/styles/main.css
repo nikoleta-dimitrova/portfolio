@@ -7,7 +7,7 @@
 /* 375 is the size of your mobile design width */
 :root {
   --scale: calc(100vw / 375);
-  --header-font:"The Seasons", "Playfair";
+  --header-font: "The Seasons", "Playfair";
   --accent-font: "Inspiration";
   --body-font: "Inter";
   --font-color: #272727;
@@ -134,7 +134,7 @@ nav a {
   font-family: var(--header-font);
   font-size: calc(175 * var(--scale)) !important;
   letter-spacing: calc(-10 * var(--scale));
-  height: 10rem;
+  height: calc(160 * var(--scale));
   display: flex;
   align-items: flex-start;
   font-weight: 500;
@@ -263,7 +263,7 @@ nav a {
 
 .project-tag img {
   grid-area: inner-div;
-  max-height: calc(53 * var(--scale));
+  height: calc(53 * var(--scale));
 }
 
 .project-tag p {
@@ -503,8 +503,8 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 200px;
-  padding-top: 40px;
+  padding-right: calc(200 * var(--scale));
+  padding-top: calc(40 * var(--scale));
 }
 
 .next-project-handle a,
@@ -538,7 +538,7 @@ nav a {
 }
 
 .description-gallery img:nth-child(2) {
-  transform: translateY(50px);
+  transform: translateY(calc(50 * var(--scale)));
 }
 
 .background__image {
@@ -605,9 +605,9 @@ nav a {
   justify-content: center;
   align-items: center;
   grid-template-columns: auto auto;
-  row-gap: 180px;
-  column-gap: 10px;
-  margin-top: -190px;
+  row-gap: calc(180 * var(--scale));
+  column-gap: calc(10 * var(--scale));
+  margin-top: calc(-190 * var(--scale));
 }
 
 .playground-container {
@@ -620,7 +620,7 @@ nav a {
 
 .playground-container img {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: calc(20 * var(--scale));
   background-color: #ff0000;
   /* Placeholder for missing image */
 }
@@ -633,5 +633,5 @@ nav a {
 
 /* Optional: Adjust the translateY for nth-of-type */
 .playground-container:nth-of-type(2n+1) {
-  transform: translateY(-160px);
+  transform: translateY(calc(-160 * var(--scale)));
 }
