@@ -1,7 +1,7 @@
 @font-face {
   font-family: "The Seasons";
   src: url("/public/assets/Demo_Fonts/Fontspring-DEMO-theseasons-bd.otf");
-  font-display: block;
+  font-display: swap;
 }
 
 /* 375 is the size of your mobile design width */
@@ -43,6 +43,7 @@
 body {
   overflow-x: hidden;
   opacity: 0;
+  font-display: swap;
 }
 
 ul {
