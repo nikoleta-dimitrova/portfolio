@@ -117,7 +117,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const myPhoto = document.querySelector(".photo");
   const numberProjects = document.getElementById("circle-number-projects");
   const circlePlayground = document.getElementById("circle-playground");
-  const backButton = document.getElementById("back-button")
+  const backButton = document.getElementById("back-button");
+  const exploreProjectButton = document.querySelector(".explore");
+  const nextProjectButton = document.querySelector(".next-project-handle");
+  const nextProjectText = document.getElementById("next-placeholder")
+
 
   navLinks.forEach(link => {
     link.addEventListener("mouseenter", () => {
@@ -422,6 +426,106 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   );
+
+  // ----------------------OPEN PROJECT ANIMATIONS--------------------------------
+  gsap.utils.toArray('.project-information').forEach(information => {
+    gsap.fromTo(information,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: information,
+          start: "top 100%",
+          toggleActions: "play reverse play reverse",
+        }
+      }
+    );
+  });
+
+  gsap.fromTo(exploreProjectButton,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: exploreProjectButton,
+        start: "top 95%",
+        toggleActions: "play reverse play reverse",
+      }
+    }
+  );
+
+  gsap.utils.toArray('.description').forEach(description => {
+    gsap.fromTo(description,
+      { opacity: 0, y: 60 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: description,
+          start: "top 80%",
+          toggleActions: "play reverse play reverse",
+        }
+      }
+    );
+  });
+
+  gsap.utils.toArray('.description-gallery').forEach(gallery => {
+    gsap.fromTo(gallery,
+      { opacity: 0, y: 80 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: gallery,
+          start: "top 70%",
+          toggleActions: "play reverse play reverse",
+          markers: true
+
+        }
+      }
+    );
+  });
+
+  gsap.fromTo(nextProjectButton,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: nextProjectButton,
+        start: "top 95%",
+        toggleActions: "play reverse play reverse",
+
+      }
+    }
+  );
+
+  gsap.fromTo(nextProjectText,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: nextProjectText,
+        start: "top 95%",
+        toggleActions: "play reverse play reverse",
+
+      }
+    }
+  );
+
+
+
+
+
 
   new Application();
   new Factory({
