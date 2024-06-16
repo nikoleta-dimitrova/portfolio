@@ -1,13 +1,13 @@
 @font-face {
   font-family: "The Seasons";
   src: url("/public/assets/Demo_Fonts/Fontspring-DEMO-theseasons-bd.otf");
-  font-display: swap;
+  font-display: block;
 }
 
 /* 375 is the size of your mobile design width */
 :root {
   --scale: calc(100vw / 375);
-  --header-font: "The Seasons";
+  --header-font:"The Seasons", "Playfair";
   --accent-font: "Inspiration";
   --body-font: "Inter";
   --font-color: #272727;
@@ -136,6 +136,7 @@ nav a {
   height: 10rem;
   display: flex;
   align-items: flex-start;
+  font-weight: 500;
 }
 
 .accent {
