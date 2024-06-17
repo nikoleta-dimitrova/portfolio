@@ -81,6 +81,7 @@ section {
   display: flex;
   gap: 0.25rem;
   font-weight: 500;
+  padding-bottom: 2px;
 }
 
 nav {

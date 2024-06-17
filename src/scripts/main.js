@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const backButton = document.getElementById("back-button");
   const exploreProjectButton = document.querySelector(".explore");
   const nextProjectButton = document.querySelector(".next-project-handle");
-  const nextProjectText = document.getElementById("next-placeholder")
+  const nextProjectText = document.getElementById("next-placeholder");
 
 
   navLinks.forEach(link => {
@@ -442,6 +442,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     );
+  });
+
+  gsap.from(backButton,{
+    transform: 'translateY(-40px)',
+    opacity: 0,
+    duration: 0.9,
+    ease: "power2.out",
   });
 
   gsap.fromTo(exploreProjectButton,
