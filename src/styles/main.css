@@ -197,7 +197,7 @@ nav a {
 .scroll-landing p,
 .explore p {
   font-size: calc(14 * var(--scale));
-  width: calc(115 * var(--scale));
+  width: calc(95 * var(--scale));
   line-height: 1.5;
   font-weight: 500;
 }
