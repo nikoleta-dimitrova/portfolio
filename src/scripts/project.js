@@ -24,7 +24,7 @@ const projectArr = [
             },
             {
                 "title": "Results",
-                "body": "The FlorryBelle App will give the students access to detailed information, moisture and sunlight levels, soil quality and room temperature. This can all happen with the help of a monitoring device placed directly in their plant pot. <br><br> The app and device will help them keep their plants alive and taking proper care of them. The monitoring device will also have watering function that is going to be very useful for the students that go back home frequently and leave their plants alone. They will be able to water their plants with just a few clicks in the app.",
+                "body": "The FlorryBelle App provides students with detailed information on moisture, sunlight, soil quality, and room temperature via a device in their plant pot. The app and device help maintain plant health, and the watering function is perfect for students who frequently travel, allowing remote watering with a few clicks.",
                 "isParallax": false,
                 "images": ['/assets/photo3-placeholder.png', '/assets/photo4-placeholder.png']
             }
@@ -65,31 +65,31 @@ const projectArr = [
         "id": 3,
         "name": "PaveMind",
         "scriptLetter": ["P"],
-        "tags": ["Prototyping", "Development", "Research"],
+        "tags": ["Research", "Prototyping", "Development"],
         "description": "A mental health website for burnout",
         "projectImages": [],
-        "expertise": ["Prototyping", "Development", "Research", "Concepting"],
+        "expertise": ["Research", "Prototyping", "Development"],
         "techUsed": ["Adobe XD", "Adobe Illustrator", "Adobe InDesign", "HTML, CSS, JS"],
         "roleInProject": ["Lead Designer", "Developer"],
-        "parallax": "/assets/parallax1-placeholder.png",
+        "parallax": "/assets/pavemind-photo1.png",
         "bodyParagraphs": [
             {
                 "title": "About Project",
                 "body": "PaveMind is an educational website for students where they can not only help each other with burnout and mental health but also find tips and tricks on how to cope with it, become more aware of the problem, and learn new things about the topic.",
                 "isParallax": false,
-                "images": ["/assets/photo1-placeholder.png", "/assets/photo2-placeholder.png"]
+                "images": ["/assets/pavemind-photo2.png", "/assets/pavemind-photo3.png"]
             },
             {
                 "title": "Main Problem",
                 "body": "A large portion of people are suffering from mental health issues daily. The numbers are reaching record rates because of how hectic our daily life has become. People are feeling the effects of overworking themselves and aren't feeling capable of continuing their work as efficiently as they did before.",
                 "isParallax": true,
-                "images": ["/assets/parallax2-placeholder.png"]
+                "images": ["/assets/pavemind-photo4.png"]
             },
             {
                 "title": "Results",
                 "body": "Our product emphasizes on the following: reliability, student comfort, privacy, community, and professionalism. <br><br> Thanks to our wide user research we were able to precisely create the most proficient solution which is a platform about burnout featuring: a questionnaire, an accurate selection of articles, community, tips, and tricks.",
                 "isParallax": false,
-                "images": ["/assets/photo3-placeholder.png", "/assets/photo4-placeholder.png"]
+                "images": ["/assets/pavemind-photo5.png", "/assets/pavemind-photo6.png"]
             }
         ]
     },
@@ -100,7 +100,7 @@ const projectArr = [
         "tags": ["Branding", "Concepting"],
         "description": "Branding for a matcha tea café",
         "expertise": ["Branding", "Design"],
-        "techUsed": ["Adobe Illustrator", "Photoshop"],
+        "techUsed": ["Adobe Illustrator", "Adobe Photoshop"],
         "roleInProject": ["Graphic Designer"],
         "parallax": "/assets/parallax1-placeholder.png",
         "bodyParagraphs": [
@@ -108,7 +108,7 @@ const projectArr = [
                 "title": "About Project",
                 "body": "Ochaya is a branding project for a new matcha tea café. The aim was to create a modern and welcoming brand identity that reflects the calm and sophisticated nature of matcha tea. <br /> <br /> The project involved designing the logo, packaging, and promotional materials.",
                 "isParallax": false,
-                "images": ["/assets/photo1-placeholder.png", "/assets/photo2-placeholder.png"]
+                "images": ["/assets/ochaya-photo1.png", "/assets/ochaya-photo2.png"]
             },
             {
                 "title": "Main Problem",
@@ -120,7 +120,7 @@ const projectArr = [
                 "title": "Results",
                 "body": "The Ochaya branding successfully captures the essence of matcha tea and provides a cohesive and appealing visual identity for the café. The designs received positive feedback and helped in establishing a strong brand presence.",
                 "isParallax": false,
-                "images": ["/assets/photo3-placeholder.png", "/assets/photo4-placeholder.png"]
+                "images": ["/assets/ochaya-photo3.png", "/assets/ochaya-photo4.png"]
             }
         ]
     }
