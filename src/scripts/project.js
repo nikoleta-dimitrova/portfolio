@@ -8,25 +8,25 @@ const projectArr = [
         "expertise": ["Concepting", "Branding", "Prototyping"],
         "techUsed": ["Adobe XD", "Adobe Illustrator"],
         "roleInProject": ["Lead Designer"],
-        "parallax": '/assets/parallax1-placeholder.png',
+        "parallax": '/assets/florybelle-photo1.png',
         "bodyParagraphs": [
             {
                 "title": "About Project",
                 "body": "An app about helping students take care of their plants. It will give them detailed information about their plant's needs and will help them keep their plants alive. <br /> <br /> They can scan their plants using their camera and the app will show them information about the moisture it needs, sunlight levels, soil quality, and room temperature.",
                 "isParallax": false,
-                "images": ['/assets/photo1-placeholder.png', '/assets/photo2-placeholder.png']
+                "images": ['/assets/florybelle-photo2.png', '/assets/florybelle-photo3.png']
             },
             {
                 "title": "Main Problem",
                 "body": "A lot of people are not being able to take care of their plants properly, do not understand their needs which leads to them dying our of unproper care.",
                 "isParallax": true,
-                "images": ['/assets/parallax2-placeholder.png']
+                "images": ['/assets/florybelle-photo4.png']
             },
             {
                 "title": "Results",
                 "body": "The FlorryBelle App provides students with detailed information on moisture, sunlight, soil quality, and room temperature via a device in their plant pot. The app and device help maintain plant health, and the watering function is perfect for students who frequently travel, allowing remote watering with a few clicks.",
                 "isParallax": false,
-                "images": ['/assets/photo3-placeholder.png', '/assets/photo4-placeholder.png']
+                "images": ['/assets/florybelle-photo5.png', '/assets/florybelle-photo6.png']
             }
         ]
     },
