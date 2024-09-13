@@ -39,25 +39,25 @@ const projectArr = [
         "expertise": ["Branding", "Concepting", "Prototyping"],
         "techUsed": ["Adobe XD", "Adobe Illustrator"],
         "roleInProject": ["Lead Designer"],
-        "parallax": "/assets/parallax1-placeholder.png",
+        "parallax": "/assets/stormy-photo1.png",
         "bodyParagraphs": [
             {
                 "title": "About Project",
                 "body": "The app that we created aims to help people become more aware of upcoming weather by providing real-time weather updates, warnings, and alerts, allowing users to make informed decisions about their activities and travel plans.",
                 "isParallax": false,
-                "images": ["/assets/photo1-placeholder.png", "/assets/photo2-placeholder.png"]
+                "images": ["/assets/stormy-photo2.png", "/assets/stormy-photo3.png"]
             },
             {
                 "title": "Main Problem",
                 "body": "The challenge posed by rain and unexpected weather changes can lead to safety risks and disruption in people's daily activities especially when it comes to commuting, traveling, and running errands.",
                 "isParallax": true,
-                "images": ["/assets/parallax2-placeholder.png"]
+                "images": ["/assets/stormy-photo4.png"]
             },
             {
                 "title": "Results",
                 "body": "The Stormy app provides users with real-time updates, weather alerts, and tips on how to prepare for different weather conditions. It helps users plan their activities and travel safely by integrating weather data with navigation systems to suggest the safest and most efficient routes based on current weather conditions.",
                 "isParallax": false,
-                "images": ["/assets/photo3-placeholder.png", "/assets/photo4-placeholder.png"]
+                "images": ["/assets/stormy-photo5.png", "/assets/stormy-photo6.png"]
             }
         ]
     },
