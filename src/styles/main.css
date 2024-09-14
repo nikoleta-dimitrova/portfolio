@@ -6,7 +6,7 @@
 
 /* 375 is the size of your mobile design width */
 :root {
-  --scale: calc(100vw / 800);
+  --scale: calc(100vw / 1200);
   --header-font: "The Seasons", "Playfair";
   --accent-font: "Inspiration";
   --body-font: "Inter";
@@ -198,8 +198,11 @@ nav a {
   left: calc(48 * var(--scale));
 }
 
+.arrow-top {
+  height: calc(40 * var(--scale));
+}
+
 .scroll-landing img,
-.arrow-top
 .explore img {
   margin-top: calc(10 * var(--scale));
   height: calc(40 * var(--scale));
