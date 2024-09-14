@@ -590,7 +590,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Remove Parallax sections on mobile
   if (isMobile()) {
-    document.querySelectorAll("section.parallax main").forEach(parallax => {
+    document.querySelectorAll("section.parallax.main").forEach(parallax => {
       parallax.remove();
     });
   }
