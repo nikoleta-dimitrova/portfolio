@@ -36,12 +36,29 @@
 
     <!-- NAVIGATION BAR -->
     <nav>
-      <a href="#projects-page">Projects</a>
-      <span>/</span>
-      <a href="#about-page">About</a>
-      <span>/</span>
-      <a href="#contact-page">Contact</a>
-      <div class="underline"></div>
+      <div class="desktop">
+        <a href="#projects-page">Projects</a>
+        <span>/</span>
+        <a href="#about-page">About</a>
+        <span>/</span>
+        <a href="#contact-page">Contact</a>
+        <div class="underline"></div>
+      </div>
+      <div class="mobile">
+        <a>Menu</a>
+        <div class="mobile-underline"></div>
+        <div class="menu">
+          <a href="#projects-page">
+            <p class="header">Pr<span class="accent" id="letter-o">o</span>jects</p>
+          </a>
+          <a href="#about-page">
+            <p class="header">A<span class="accent" id="letter-b">b</span>out</p>
+          </a>
+          <a href="#contact-page">
+            <p class="header">C<span id="letter-o" class="accent">o</span>ntact</p>
+          </a>
+        </div>
+      </div>
     </nav>
 
     <!-- LANDING SCREEN -->
@@ -150,7 +167,7 @@
         <div id="circle-playground">
           <img src="/assets/circle-playground.svg" />
           <!-- <p>Check <br /><a href="./playground.html">playground</a></p> -->
-           <p>Just around <br /><span href="">the corner</span></p>
+          <p>Just around <br /><span href="">the corner</span></p>
         </div>
       </div>
     </section>
@@ -198,7 +215,7 @@
       </div>
     </section>
 
-    <section class="parallax">
+    <section class="parallax main">
       <div class="content__list">
         <div class="content__item" data-component="parallax" data-id="parallax-3">
           <img src="/public/assets/parallax-placeholder.png" class="content__image" alt=""

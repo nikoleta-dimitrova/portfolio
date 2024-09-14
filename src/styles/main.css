@@ -63,6 +63,14 @@ section {
   flex-direction: column;
 }
 
+nav .desktop {
+  display: block;
+}
+
+nav .mobile {
+  display: none;
+}
+
 #landing-page {
   margin-top: calc(-16 * var(--scale));
 }
@@ -665,10 +673,74 @@ nav a {
     padding-right: calc(20 * var(--scale));
   }
 
+  nav .mobile {
+    display: block;
+    text-align: right;
+    position: relative;
+  }
+
+  nav .mobile .mobile-underline {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 0.8px;
+    background-color: #272727;
+  }
+
+  nav .mobile .menu {
+    display: none;
+    text-align: right;
+    margin-top: .25rem;
+  }
+
+  nav .mobile .menu.open {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    gap: calc(100 * var(--scale));
+    padding-top: 1rem;
+  }
+
+  nav .mobile .menu.open a {
+    padding-left: calc(58 * var(--scale));
+  }
+
+  nav .desktop {
+    display: none;
+  }
+
   #landing-page .headline div {
     flex-direction: column;
     align-items: normal !important;
     gap: calc(30 * var(--scale));
+  }
+
+  .headline div .description {
+    margin-left: 0;
+  }
+
+  .header,
+  .header-title {
+    font-size: calc(200 * var(--scale)) !important;
+    letter-spacing: calc(-10 * var(--scale));
+  }
+
+  #letter-d,
+  #letter-e,
+  #letter-b,
+  #letter-n,
+  #letter-o {
+    line-height: calc(140 * var(--scale));
   }
 
   .project-tag {

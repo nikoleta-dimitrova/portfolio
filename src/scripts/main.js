@@ -130,6 +130,34 @@ document.addEventListener("DOMContentLoaded", () => {
   const exploreProjectButton = document.querySelector(".explore");
   const nextProjectButton = document.querySelector(".next-project-handle");
   const nextProjectText = document.getElementById("next-placeholder");
+  const mobileMenu = document.querySelector("nav .mobile a");
+  const mobileMenuButtons = document.querySelectorAll("nav .mobile .menu a")
+
+  mobileMenuButtons.forEach(button => {
+    button.onclick = () => {
+      const menuTitle = document.querySelector(".mobile a")
+      const x = document.querySelector(".mobile .menu");
+      if (x.className.includes("open")) {
+        x.className = "menu";
+        menuTitle.textContent = "menu"
+      } else {
+        x.className += " open";
+        menuTitle.textContent = "close"
+      }
+    }
+  })
+
+  mobileMenu.onclick = () => {
+    const menuTitle = document.querySelector(".mobile a")
+    const x = document.querySelector(".mobile .menu");
+    if (x.className.includes("open")) {
+      x.className = "menu";
+      menuTitle.textContent = "menu"
+    } else {
+      x.className += " open";
+      menuTitle.textContent = "close"
+    }
+  }
 
   navLinks.forEach(link => {
     link.addEventListener("mouseenter", () => {
@@ -562,7 +590,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Remove Parallax sections on mobile
   if (isMobile()) {
-    document.querySelectorAll("section.parallax").forEach(parallax => {
+    document.querySelectorAll("section.parallax main").forEach(parallax => {
       parallax.remove();
     });
   }
