@@ -661,8 +661,8 @@ nav a {
 
 @media (max-width: 967px) {
   section {
-    padding-left: calc(50 * var(--scale));
-    padding-right: calc(50 * var(--scale));
+    padding-left: calc(20 * var(--scale));
+    padding-right: calc(20 * var(--scale));
   }
 
   #landing-page .headline div {
