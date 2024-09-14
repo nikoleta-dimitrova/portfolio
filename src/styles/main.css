@@ -198,7 +198,9 @@ nav a {
   left: calc(48 * var(--scale));
 }
 
-.scroll-landing img {
+.scroll-landing img,
+.arrow-top
+.explore img {
   margin-top: calc(10 * var(--scale));
   height: calc(40 * var(--scale));
 }
