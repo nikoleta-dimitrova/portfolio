@@ -662,77 +662,93 @@ nav a {
   text-align: left;
 }
 
-/* Optional: Adjust the translateY for nth-of-type */
 .playground-container:nth-of-type(2n+1) {
   transform: translateY(calc(-160 * var(--scale)));
 }
 
 @media (max-width: 967px) {
   section {
-    padding-left: calc(20 * var(--scale));
-    padding-right: calc(20 * var(--scale));
+    padding-left: calc(40 * var(--scale));
+    padding-right: calc(-40 * var(--scale));
   }
 
+  /* MENU RESPONSIVE */
   nav .mobile {
     display: block;
     text-align: right;
     position: relative;
-  }
+    margin: calc(40 * var(--scale));
 
-  nav .mobile .mobile-underline {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 0.8px;
-    background-color: #272727;
-  }
+    a {
+      font-size: calc(40 * var(--scale));
+    }
 
-  nav .mobile .menu {
-    display: none;
-    text-align: right;
-    margin-top: .25rem;
-  }
+    .mobile-underline {
+      position: absolute;
+      bottom: -1px;
+      right: 0;
+      width: 100%;
+      height: 0.8px;
+      background-color: #272727;
+    }
 
-  nav .mobile .menu.open {
-    position: fixed;
-    margin: 0;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    gap: calc(100 * var(--scale));
-    padding-top: 1rem;
-  }
+    .menu {
+      display: none;
+      text-align: right;
+      margin-top: .25rem;
+    }
 
-  nav .mobile .menu.open a {
-    padding-left: calc(58 * var(--scale));
+    .menu.open {
+      position: fixed;
+      margin: 0;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      gap: calc(100 * var(--scale));
+      padding-top: 1rem;
+    }
+
+    .menu.open a {
+      padding-left: calc(58 * var(--scale));
+    }
   }
 
   nav .desktop {
     display: none;
   }
 
-  #landing-page .headline div {
-    flex-direction: column;
-    align-items: normal !important;
-    gap: calc(30 * var(--scale));
-  }
-
-  .headline div .description {
-    margin-left: 0;
-  }
-
-  .header,
-  .header-title {
+  .header {
     font-size: calc(200 * var(--scale)) !important;
-    letter-spacing: calc(-10 * var(--scale));
+    letter-spacing: calc(-15 * var(--scale));
+  }
+
+  .headline {
+    margin-top: calc(100 *var(--scale));
+    gap: 8px;
+
+    .header-title {
+      font-size: calc(220 * var(--scale)) !important;
+      letter-spacing: calc(-15 * var(--scale));
+    }
+
+    div {
+      flex-direction: column;
+      align-items: normal !important;
+      gap: calc(90 * var(--scale));
+    }
+
+    div .description {
+      margin-left: 0;
+      font-size: calc(40 * var(--scale));
+      width: calc(500 * var(--scale));
+    }
   }
 
   #letter-d,
@@ -740,7 +756,29 @@ nav a {
   #letter-b,
   #letter-n,
   #letter-o {
-    line-height: calc(140 * var(--scale));
+    line-height: calc(180 * var(--scale));
+    font-size: calc(180* var(--scale));
+  }
+
+  .say-hi img {
+    height: calc(400 * var(--scale));
+  }
+
+  .say-hi a,
+  .scroll-landing p {
+    font-size: calc(40 * var(--scale));
+    padding: 0.5rem 1rem;
+  }
+
+  .scroll-landing {
+    p {
+      width: calc(230 * var(--scale));
+    }
+
+    img {
+      height: calc(150 * var(--scale));
+    }
+
   }
 
   .project-tag {
@@ -750,11 +788,10 @@ nav a {
   .playground {
     flex-direction: column;
     gap: calc(100 * var(--scale));
-    /* margin:; */
-  }
 
-  .playground p {
-    align-self: flex-start;
+    p {
+      align-self: flex-start;
+    }
   }
 
   #circle-playground {
