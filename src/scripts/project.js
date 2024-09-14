@@ -210,6 +210,7 @@ function updateProjectHTML() {
     const nextPrj = document.querySelector('.next-project');
     const nextPrjHeader = nextPrj.querySelector(".header");
     nextPrjHeader.innerHTML = nextProject.name.replace(nextProject.scriptLetter[0], `<span id="letter-o" class="accent">${nextProject.scriptLetter[0]}</span>`);
+    nextPrjHeader.href = `/project.html?pid=${nextProjectId}`;
 
     const nextPrjButton = nextPrj.querySelector('.next-project-a');
     nextPrjButton.href = `/project.html?pid=${nextProjectId}`;

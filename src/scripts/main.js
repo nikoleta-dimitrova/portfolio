@@ -5,7 +5,14 @@ import Lenis from 'lenis';
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
+function isMobile() {
+  const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+  return regex.test(navigator.userAgent);
+}
+
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+const mm = gsap.matchMedia()
 
 // ------------------LENIS FOR SMOOTH SCROLLING------------------------
 const lenis = new Lenis({
@@ -32,13 +39,15 @@ class Application {
 
     gsap.set(this.$images, { scale: 0 });
 
-    this.$projects.forEach(($project) => {
-      const id = $project.dataset.id;
-      $project.addEventListener("mouseenter", () => this.handleProjectEnter(id));
-      $project.addEventListener("mouseleave", () => this.handleProjectLeave(id));
-    });
+    if (!isMobile()) {
+      this.$projects.forEach(($project) => {
+        const id = $project.dataset.id;
+        $project.addEventListener("mouseenter", () => this.handleProjectEnter(id));
+        $project.addEventListener("mouseleave", () => this.handleProjectLeave(id));
+      });
 
-    window.addEventListener("mousemove", this.handleMouseMove);
+      window.addEventListener("mousemove", this.handleMouseMove);
+    }
     gsap.ticker.add(this.handleTick);
   }
 
@@ -122,7 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextProjectButton = document.querySelector(".next-project-handle");
   const nextProjectText = document.getElementById("next-placeholder");
 
-
   navLinks.forEach(link => {
     link.addEventListener("mouseenter", () => {
       gsap.to(underline, { width: link.offsetWidth, left: link.offsetLeft, duration: 0.5, ease: "power2.out" });
@@ -146,13 +154,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   gsap.set(document.querySelector("body"), { alpha: 1 });
 
-  gsap.from([nav], {
-    transform: 'translateY(-50px)',
-    opacity: 0,
+  gsap.to(arrow, {
+    y: -15,
     duration: 1.5,
-    ease: "power2.out",
-    stagger: 0.1,
-  }, "-=0.8");
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+  });
+
+  gsap.to(projectArrow, {
+    y: -15,
+    duration: 1.5,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+  });
+
+  gsap.to(sayHiCircle, {
+    rotation: 15,
+    duration: 1.5,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+  });
 
   // -----------------------SCROLL TO SECTIONS---------------------------
   const smoothScrollTo = (target) => {
@@ -164,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
       duration: 2,
       ease: "power2.out"
     });
-  };
+  }
 
   if (!window.location.pathname.includes("project") && !window.location.pathname.includes("playground")) {
     document.querySelectorAll("nav a").forEach((link) => {
@@ -196,353 +220,337 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "sine.inOut",
   });
 
+  if (!isMobile()) {
+    gsap.from([nav], {
+      transform: 'translateY(-50px)',
+      opacity: 0,
+      duration: 1.5,
+      ease: "power2.out",
+      stagger: 0.1,
+    }, "-=0.8");
 
-  // ------------------------ANIMATED HEADLINES-----------------------
-  gsap.utils.toArray('.header').forEach(headline => {
-    gsap.fromTo(headline,
-      { opacity: 0, transform: 'translateY(60px)' },
-      {
-        opacity: 1,
-        transform: 'translateY(0px)',
-        duration: 1,
-        scrollTrigger: {
-          trigger: headline,
-          start: "top 95%",
-          toggleActions: "play reverse play reverse",
-        }
-      }
-    );
-  });
-
-   // -----------------------LANDING SCREEN ANIMATIONS-------------------------------
-   gsap.utils.toArray([sayHi, description, scrollLanding]).forEach(element => {
-    gsap.fromTo(element,
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: element,
-          start: "top 95%",
-          toggleActions: "play reverse play reverse",
-          onEnter: () => {
-            gsap.to(element, { opacity: 1, y: 0, duration: 1 });
+    // ------------------------ANIMATED HEADLINES-----------------------
+    gsap.utils.toArray('.header').forEach(headline => {
+      gsap.fromTo(headline,
+        { opacity: 0, transform: 'translateY(60px)' },
+        {
+          opacity: 1,
+          transform: 'translateY(0px)',
+          duration: 1,
+          scrollTrigger: {
+            trigger: headline,
+            start: "top 95%",
+            toggleActions: "play reverse play reverse",
           }
         }
-      }
-    );
-  })
+      );
+    });
 
-  gsap.utils.toArray('.header-title').forEach(element => {
-    gsap.fromTo(element,
-      { opacity: 0, y: -50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: element,
-          start: "top 95%",
-          toggleActions: "play reverse play reverse",
-
+    // -----------------------LANDING SCREEN ANIMATIONS-------------------------------
+    gsap.utils.toArray([sayHi, description, scrollLanding]).forEach(element => {
+      gsap.fromTo(element,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element,
+            start: "top 95%",
+            toggleActions: "play reverse play reverse",
+            onEnter: () => {
+              gsap.to(element, { opacity: 1, y: 0, duration: 1 });
+            }
+          }
         }
-      }
-    );
-  })
+      );
+    })
 
-  gsap.to(arrow, {
-    y: -15,
-    duration: 1.5,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut",
-  });
+    gsap.utils.toArray('.header-title').forEach(element => {
+      gsap.fromTo(element,
+        { opacity: 0, y: -50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element,
+            start: "top 95%",
+            toggleActions: "play reverse play reverse",
 
-  gsap.to(projectArrow, {
-    y: -15,
-    duration: 1.5,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut",
-  });
+          }
+        }
+      );
+    })
 
-  gsap.to(sayHiCircle, {
-    rotation: 15,
-    duration: 1.5,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut",
-  });
+    // ------------------------PROJECT SECTION ANIMATIONS --------------------------
+    gsap.utils.toArray('.project-tag').forEach(tag => {
+      gsap.fromTo(tag,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: tag,
+            start: "top 95%",
+            toggleActions: "play reverse play reverse",
+          }
+        }
+      );
+    })
 
+    gsap.utils.toArray('.number-of-project').forEach(number => {
+      gsap.fromTo(number,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: number,
+            start: "top 95%",
+            toggleActions: "play reverse play reverse",
+          }
+        }
+      );
+    });
 
-  // ------------------------PROJECT SECTION ANIMATIONS --------------------------
-  gsap.utils.toArray('.project-tag').forEach(tag => {
-    gsap.fromTo(tag,
+    gsap.fromTo(numberProjects,
       { opacity: 0, y: 50 },
       {
         opacity: 1,
         y: 0,
         duration: 1,
         scrollTrigger: {
-          trigger: tag,
+          trigger: numberProjects,
           start: "top 95%",
           toggleActions: "play reverse play reverse",
+
         }
       }
     );
-  });
 
-  gsap.utils.toArray('.number-of-project').forEach(number => {
-    gsap.fromTo(number,
+    gsap.fromTo(circlePlayground,
       { opacity: 0, y: 50 },
       {
         opacity: 1,
         y: 0,
         duration: 1,
         scrollTrigger: {
-          trigger: number,
+          trigger: circlePlayground,
           start: "top 95%",
           toggleActions: "play reverse play reverse",
+
         }
       }
     );
-  });
 
-  gsap.fromTo(numberProjects,
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: numberProjects,
-        start: "top 95%",
-        toggleActions: "play reverse play reverse",
-
-      }
-    }
-  );
-
-  gsap.fromTo(circlePlayground,
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: circlePlayground,
-        start: "top 95%",
-        toggleActions: "play reverse play reverse",
-
-      }
-    }
-  );
-
-  // ------------------------ABOUT ME SECTION ANIMATIONS-------------------------
-  gsap.fromTo(aboutMe,
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: aboutMe,
-        start: "top 95%",
-        toggleActions: "play reverse play reverse",
-      }
-    }
-  );
-
-  gsap.utils.toArray('.skills').forEach(skills => {
-    gsap.fromTo(skills,
+    // ------------------------ABOUT ME SECTION ANIMATIONS-------------------------
+    gsap.fromTo(aboutMe,
       { opacity: 0, y: 50 },
       {
         opacity: 1,
         y: 0,
         duration: 1,
         scrollTrigger: {
-          trigger: skills,
+          trigger: aboutMe,
+          start: "top 95%",
+          toggleActions: "play reverse play reverse",
+        }
+      }
+    );
+
+    gsap.utils.toArray('.skills').forEach(skills => {
+      gsap.fromTo(skills,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: skills,
+            start: "top 100%",
+            toggleActions: "play reverse play reverse",
+          }
+        }
+      );
+    });
+
+    gsap.fromTo(myPhoto,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: myPhoto,
+          start: "top 95%",
+          toggleActions: "play reverse play reverse",
+        }
+      }
+    );
+
+    // -------------------------CONTACT SECTION ANIMATIONS--------------------------
+    gsap.fromTo(contactQuestion,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: contactQuestion,
+          start: "top 95%",
+          toggleActions: "play reverse play reverse",
+        }
+      }
+    );
+
+    gsap.fromTo(getTouch,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: getTouch,
+          start: "top 95%",
+          toggleActions: "play reverse play reverse",
+        }
+      }
+    );
+
+    gsap.fromTo(footerAnimation,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: footerAnimation,
           start: "top 100%",
           toggleActions: "play reverse play reverse",
         }
       }
     );
-  });
 
-  gsap.fromTo(myPhoto,
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: myPhoto,
-        start: "top 95%",
-        toggleActions: "play reverse play reverse",
-      }
-    }
-  );
+    // ----------------------OPEN PROJECT ANIMATIONS--------------------------------
+    gsap.utils.toArray('.project-information').forEach(information => {
+      gsap.fromTo(information,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: information,
+            start: "top 100%",
+            toggleActions: "play reverse play reverse",
+          }
+        }
+      );
+    });
 
-  // -------------------------CONTACT SECTION ANIMATIONS--------------------------
-  gsap.fromTo(contactQuestion,
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: contactQuestion,
-        start: "top 95%",
-        toggleActions: "play reverse play reverse",
-      }
-    }
-  );
+    gsap.from(backButton, {
+      transform: 'translateY(-40px)',
+      opacity: 0,
+      duration: 0.9,
+      ease: "power2.out",
+    });
 
-  gsap.fromTo(getTouch,
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: getTouch,
-        start: "top 95%",
-        toggleActions: "play reverse play reverse",
-      }
-    }
-  );
-
-  gsap.fromTo(footerAnimation,
-    { opacity: 0, y: 20 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: footerAnimation,
-        start: "top 100%",
-        toggleActions: "play reverse play reverse",
-      }
-    }
-  );
-
-  // ----------------------OPEN PROJECT ANIMATIONS--------------------------------
-  gsap.utils.toArray('.project-information').forEach(information => {
-    gsap.fromTo(information,
+    gsap.fromTo(exploreProjectButton,
       { opacity: 0, y: 50 },
       {
         opacity: 1,
         y: 0,
         duration: 1,
         scrollTrigger: {
-          trigger: information,
-          start: "top 100%",
+          trigger: exploreProjectButton,
+          start: "top 95%",
           toggleActions: "play reverse play reverse",
         }
       }
     );
-  });
 
-  gsap.from(backButton,{
-    transform: 'translateY(-40px)',
-    opacity: 0,
-    duration: 0.9,
-    ease: "power2.out",
-  });
+    gsap.utils.toArray('.description').forEach(description => {
+      gsap.fromTo(description,
+        { opacity: 0, y: 60 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: description,
+            start: "top 80%",
+            toggleActions: "play reverse play reverse",
+          }
+        }
+      );
+    });
 
-  gsap.fromTo(exploreProjectButton,
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: exploreProjectButton,
-        start: "top 95%",
-        toggleActions: "play reverse play reverse",
-      }
-    }
-  );
+    gsap.utils.toArray('.description-gallery').forEach(gallery => {
+      gsap.fromTo(gallery,
+        { opacity: 0, y: 80 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: gallery,
+            start: "top 70%",
+            toggleActions: "play reverse play reverse",
+          }
+        }
+      );
+    });
 
-  gsap.utils.toArray('.description').forEach(description => {
-    gsap.fromTo(description,
-      { opacity: 0, y: 60 },
+    gsap.fromTo(nextProjectButton,
+      { opacity: 0, y: 50 },
       {
         opacity: 1,
         y: 0,
         duration: 1,
         scrollTrigger: {
-          trigger: description,
-          start: "top 80%",
+          trigger: nextProjectButton,
+          start: "top 95%",
           toggleActions: "play reverse play reverse",
+
         }
       }
     );
-  });
 
-  gsap.utils.toArray('.description-gallery').forEach(gallery => {
-    gsap.fromTo(gallery,
-      { opacity: 0, y: 80 },
+    gsap.fromTo(nextProjectText,
+      { opacity: 0, y: 50 },
       {
         opacity: 1,
         y: 0,
         duration: 1,
         scrollTrigger: {
-          trigger: gallery,
-          start: "top 70%",
+          trigger: nextProjectText,
+          start: "top 95%",
           toggleActions: "play reverse play reverse",
+
         }
       }
     );
-  });
 
-  gsap.fromTo(nextProjectButton,
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: nextProjectButton,
-        start: "top 95%",
-        toggleActions: "play reverse play reverse",
-
-      }
-    }
-  );
-
-  gsap.fromTo(nextProjectText,
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: nextProjectText,
-        start: "top 95%",
-        toggleActions: "play reverse play reverse",
-
-      }
-    }
-  );
-
-// -----------------------------PLAYGROUND PAGE ANIMATIONS---------------------------
-gsap.utils.toArray('.playground-grid').forEach(playground => {
-  gsap.fromTo(playground,
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: playground,
-        start: "top 90%",
-        toggleActions: "play reverse play reverse",
-      }
-    }
-  );
-});
+    // -----------------------------PLAYGROUND PAGE ANIMATIONS---------------------------
+    gsap.utils.toArray('.playground-grid').forEach(playground => {
+      gsap.fromTo(playground,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: playground,
+            start: "top 90%",
+            toggleActions: "play reverse play reverse",
+          }
+        }
+      );
+    });
+  }
 
   new Application();
   new Factory({
@@ -552,3 +560,6 @@ gsap.utils.toArray('.playground-grid').forEach(playground => {
     },
   });
 });
+
+
+
