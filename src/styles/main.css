@@ -712,7 +712,7 @@ nav a {
       display: flex;
       flex-direction: column;
       gap: calc(100 * var(--scale));
-      padding-top: 1rem;
+      padding-top: calc(124 * var(--scale));
     }
 
     .menu.open a {
@@ -756,12 +756,17 @@ nav a {
   #letter-b,
   #letter-n,
   #letter-o {
-    line-height: calc(190 * var(--scale));
-    font-size: calc(180* var(--scale));
+    line-height: calc(180 * var(--scale));
+    font-size: calc(190* var(--scale));
   }
 
   .say-hi img {
     height: calc(400 * var(--scale));
+  }
+
+  .say-hi {
+    padding-right: 1rem;
+    margin-bottom: calc(40 * var(--scale));
   }
 
   .say-hi a,
@@ -771,6 +776,8 @@ nav a {
   }
 
   .scroll-landing {
+    margin-bottom: calc(40 * var(--scale));
+
     p {
       width: calc(230 * var(--scale));
     }
