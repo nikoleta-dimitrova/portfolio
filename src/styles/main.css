@@ -193,8 +193,14 @@ nav a {
 .scroll-landing {
   display: flex;
   position: absolute;
+  justify-content: center;
   bottom: calc(82 * var(--scale));
   left: calc(48 * var(--scale));
+}
+
+.scroll-landing img {
+  margin-top: calc(10 * var(--scale));
+  height: calc(40 * var(--scale));
 }
 
 .scroll-landing p,
