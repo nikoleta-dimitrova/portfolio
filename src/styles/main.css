@@ -157,7 +157,7 @@ nav a {
 #letter-b,
 #letter-n,
 #letter-o {
-  margin-right: 0.7rem;
+  margin-right: calc(10 * var(--scale));
   line-height: calc(130 * var(--scale));
 }
 
@@ -657,4 +657,57 @@ nav a {
 /* Optional: Adjust the translateY for nth-of-type */
 .playground-container:nth-of-type(2n+1) {
   transform: translateY(calc(-160 * var(--scale)));
+}
+
+@media (max-width: 967px) {
+  section {
+    padding-left: calc(50 * var(--scale));
+    padding-right: calc(50 * var(--scale));
+  }
+
+  #landing-page .headline div {
+    flex-direction: column;
+    align-items: normal !important;
+    gap: calc(30 * var(--scale));
+  }
+
+  .project-tag {
+    display: none;
+  }
+
+  .playground {
+    flex-direction: column;
+    gap: calc(100 * var(--scale));
+    /* margin:; */
+  }
+
+  .playground p {
+    align-self: flex-start;
+  }
+
+  #circle-playground {
+    align-self: flex-end;
+  }
+
+  #about-page .headline div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #about-footer .headline.info {
+    justify-content: flex-end;
+  }
+
+  .skills {
+    margin-left: 0;
+    padding-top: calc(20 * var(--scale));
+  }
+
+  .headline.info .photo {
+    display: none;
+  }
+
+  .contact-question {
+    margin-left: 0;
+  }
 }

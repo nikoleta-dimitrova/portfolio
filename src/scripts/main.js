@@ -559,6 +559,13 @@ document.addEventListener("DOMContentLoaded", () => {
       parallax: Parallax,
     },
   });
+
+  // Remove Parallax sections on mobile
+  if (isMobile()) {
+    document.querySelectorAll("section.parallax").forEach(parallax => {
+      parallax.remove();
+    });
+  }
 });
 
 
