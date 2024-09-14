@@ -741,7 +741,7 @@ nav a {
     div {
       flex-direction: column;
       align-items: normal !important;
-      gap: calc(90 * var(--scale));
+      gap: calc(80 * var(--scale));
     }
 
     div .description {
@@ -790,43 +790,60 @@ nav a {
 
   }
 
-  #headline-two {
-    flex-direction: row;
-  }
+  #projects-page {
+    #headline-two {
+      flex-direction: row;
+    }
 
-  .project-tag {
-    display: none;
+    #circle-number-projects {
+      /* width: calc(200 * var(--scale)); */
+      display: none;
+    }
+
+    .project-tag {
+      display: none;
+    }
   }
 
   .playground {
     flex-direction: column;
-    gap: calc(100 * var(--scale));
+    gap: calc(190 * var(--scale));
 
     p {
       align-self: flex-start;
     }
+
+    #circle-playground {
+      align-self: flex-end;
+      width: calc(650 * var(--scale));
+
+      p{
+        font-size: calc(40 * var(--scale));
+
+      }
+    }
   }
 
-  #circle-playground {
-    align-self: flex-end;
-  }
+  #about-page {
+    .skills {
+      margin-left: 0;
+      padding-top: calc(20 * var(--scale));
+      font-size: calc(40 * var(--scale));
+    }
 
-  #about-page .headline div {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .about-text {
+      font-size: calc(40 * var(--scale));
+      width: calc(800 * var(--scale));
+      margin-bottom: calc(90 * var(--scale));
+    }
 
-  #about-footer .headline.info {
-    justify-content: flex-end;
-  }
+    .headline.info {
+      justify-content: flex-end;
+    }
 
-  .skills {
-    margin-left: 0;
-    padding-top: calc(20 * var(--scale));
-  }
-
-  .headline.info .photo {
-    display: none;
+    .photo {
+      display: none;
+    }
   }
 
   #contact-page {
@@ -849,7 +866,6 @@ nav a {
     }
 
     ul {
-      transform: translateX(-25%);
       font-size: calc(40 * var(--scale));
       margin-top: calc(150 *var(--scale));
       margin-left: 0;
