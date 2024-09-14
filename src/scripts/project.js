@@ -1,7 +1,7 @@
 const projectArr = [
     {
         "id": 1,
-        "name": "FloryBelle",
+        "name": "FloryBele",
         "scriptLetter": ["o"],
         "tags": ["Prototyping", "Concepting"],
         "description": "An app about taking care of plants.",
