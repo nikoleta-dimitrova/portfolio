@@ -756,7 +756,7 @@ nav a {
   #letter-b,
   #letter-n,
   #letter-o {
-    line-height: calc(180 * var(--scale));
+    line-height: calc(190 * var(--scale));
     font-size: calc(180* var(--scale));
   }
 
