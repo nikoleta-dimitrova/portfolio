@@ -1039,7 +1039,6 @@ nav a {
 
     .project-about .description,
     #main-problem {
-      margin-top: calc(50 * var(--scale));
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -1055,6 +1054,10 @@ nav a {
     #main-problem p {
       text-indent: 0;
       width: 100%;
+    }
+
+    .project-about .description > p {
+      width: calc(800 * var(--scale));
     }
 
     .description-gallery {
