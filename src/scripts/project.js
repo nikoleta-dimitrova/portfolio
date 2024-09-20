@@ -37,7 +37,7 @@ const projectArr = [
         "tags": ["Branding", "Concepting", "Prototyping"],
         "description": "A weather app for students",
         "expertise": ["Branding", "Concepting", "Prototyping"],
-        "techUsed": ["Adobe XD", "Adobe Illustrator"],
+        "techUsed": ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
         "roleInProject": ["Lead Designer"],
         "parallax": "/assets/stormy-photo1.png",
         "bodyParagraphs": [
@@ -102,25 +102,25 @@ const projectArr = [
         "expertise": ["Branding", "Design"],
         "techUsed": ["Adobe Illustrator", "Adobe Photoshop"],
         "roleInProject": ["Graphic Designer"],
-        "parallax": "/assets/parallax1-placeholder.png",
+        "parallax": "/assets/ochaya-photo1.png",
         "bodyParagraphs": [
             {
                 "title": "About Project",
                 "body": "Ochaya is a branding project for a new matcha tea café. The aim was to create a modern and welcoming brand identity that reflects the calm and sophisticated nature of matcha tea. <br /> <br /> The project involved designing the logo, packaging, and promotional materials.",
                 "isParallax": false,
-                "images": ["/assets/ochaya-photo1.png", "/assets/ochaya-photo2.png"]
+                "images": ["/assets/ochaya-photo2.png", "/assets/ochaya-photo3.png"]
             },
             {
                 "title": "Main Problem",
                 "body": "Creating a unique brand identity in a saturated market of tea cafés. The challenge was to highlight the unique aspects of matcha and the café's modern aesthetic.",
                 "isParallax": true,
-                "images": ["/assets/parallax2-placeholder.png"]
+                "images": ["/assets/ochaya-photo4.png"]
             },
             {
                 "title": "Results",
                 "body": "The Ochaya branding successfully captures the essence of matcha tea and provides a cohesive and appealing visual identity for the café. The designs received positive feedback and helped in establishing a strong brand presence.",
                 "isParallax": false,
-                "images": ["/assets/ochaya-photo3.png", "/assets/ochaya-photo4.png"]
+                "images": ["/assets/ochaya-photo5.png", "/assets/ochaya-photo6.png"]
             }
         ]
     }
