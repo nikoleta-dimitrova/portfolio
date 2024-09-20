@@ -1056,7 +1056,8 @@ nav a {
       width: 100%;
     }
 
-    .project-about .description > p {
+    .project-about .description > p
+    #main-problem {
       width: calc(800 * var(--scale));
     }
 
