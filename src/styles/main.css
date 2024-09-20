@@ -923,7 +923,7 @@ nav a {
 
     ul {
       font-size: calc(40 * var(--scale));
-      margin-top: calc(150 *var(--scale));
+      padding-top: calc(80 *var(--scale));
       margin-left: 0;
     }
 
@@ -950,10 +950,51 @@ nav a {
   }
 
   #project-body {
+    #project-landing .headline .description {
+      margin-left: calc(38 * var(--scale));
+    }
+
     .project-information {
       display: grid;
       grid-template-columns: repeat(2, auto);
     }
+
+    #back-button {
+      font-size: calc(40 * var(--scale));
+      padding-top: calc(38 * var(--scale));
+    }
+
+    .project-information li {
+      font-size: calc(40 * var(--scale));
+    }
+
+    .project-information p {
+      font-size: calc(40 * var(--scale));
+      font-weight: 500;
+    }
+
+    .explore {
+      p {
+        width: calc(230 * var(--scale));
+        font-size: calc(40 * var(--scale));
+        padding: 0.5rem 1rem;
+      }
+
+      img {
+        height: calc(150 * var(--scale));
+      }
+    }
+
+    .project-about {
+      p {
+        font-size: calc(40 * var(--scale));
+      }
+
+      .about-title img {
+        width: calc(550 * var(--scale));
+      }
+    }
+
 
     section {
       min-height: 0;
@@ -1004,6 +1045,7 @@ nav a {
       justify-content: center;
       align-items: center;
       padding-bottom: 2rem;
+      gap: 3rem;
     }
 
     .about-title {
@@ -1032,6 +1074,10 @@ nav a {
 
     .next-project-handle {
       display: none;
+    }
+
+    #next-placeholder{
+      font-size: calc(40 * var(--scale));
     }
   }
 }
