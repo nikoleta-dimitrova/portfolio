@@ -921,10 +921,9 @@ nav a {
       }
     }
 
-    ul {
+    ul li {
       font-size: calc(40 * var(--scale));
-      padding-top: calc(80 *var(--scale));
-      margin-left: 0;
+      transform: translateY(calc(60* var(--scale)));
     }
 
   }
@@ -1076,7 +1075,7 @@ nav a {
       display: none;
     }
 
-    #next-placeholder{
+    #next-placeholder {
       font-size: calc(40 * var(--scale));
     }
   }
