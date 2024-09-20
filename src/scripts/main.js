@@ -106,7 +106,7 @@ class Parallax {
 
 
 // ----------------------------------ANIMATING ELEMENTS--------------------------------------
-document.addEventListener("DOMContentLoaded", () => {
+function createAnimations() {
   const nav = document.querySelector("nav");
   const description = document.querySelector(".description");
   const sayHi = document.querySelector(".say-hi");
@@ -594,7 +594,16 @@ document.addEventListener("DOMContentLoaded", () => {
       parallax.remove();
     });
   }
-});
+}
 
+document.addEventListener("DOMContentLoaded", () => setTimeout(createAnimations(), 200))
+document.fonts.ready.then(function () {
+  setTimeout(() => {
+    document.querySelector(".preloader").addEventListener('animationend', function () {
+      div.style.display = 'none';
+    });
+    document.querySelector(".preloader").classList.add("slide-up")
+  }, 200)
+});
 
 
