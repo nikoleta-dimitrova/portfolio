@@ -5,26 +5,26 @@ const projectArr = [
         "scriptLetter": ["o"],
         "tags": ["Prototyping", "Concepting"],
         "description": "An app about taking care of plants.",
-        "expertise": ["Concepting", "Branding", "Prototyping"],
+        "expertise": ["Research","Prototyping","Concepting", "Branding"],
         "techUsed": ["Adobe XD", "Adobe Illustrator"],
         "roleInProject": ["Lead Designer"],
         "parallax": '/assets/florybelle-photo1.png',
         "bodyParagraphs": [
             {
                 "title": "About Project",
-                "body": "An app about helping students take care of their plants. It will give them detailed information about their plant's needs and will help them keep their plants alive. <br /> <br /> They can scan their plants using their camera and the app will show them information about the moisture it needs, sunlight levels, soil quality, and room temperature.",
+                "body": "FlorryBele is an app designed to help students care for their plants with ease. It provides detailed insights into their plants' specific needs, helping them keep their greenery alive and thriving. <br><br> Users can scan their plants with their phone's camera, and the app will offer detailed guidance on moisture requirements, sunlight exposure, soil quality, and optimal room temperature.",
                 "isParallax": false,
                 "images": ['/assets/florybelle-photo2.png', '/assets/florybelle-photo3.png']
             },
             {
                 "title": "Main Problem",
-                "body": "A lot of people are not being able to take care of their plants properly, do not understand their needs which leads to them dying our of unproper care.",
+                "body": "Many people struggle to properly care for their plants, often due to a lack of understanding of their unique needs, which leads to plants dying from neglect or improper care.",
                 "isParallax": true,
                 "images": ['/assets/florybelle-photo4.png']
             },
             {
                 "title": "Results",
-                "body": "The FlorryBelle App provides students with detailed information on moisture, sunlight, soil quality, and room temperature via a device in their plant pot. The app and device help maintain plant health, and the watering function is perfect for students who frequently travel, allowing remote watering with a few clicks.",
+                "body": "The FlorryBele app empowers students with real-time data on moisture, sunlight, soil quality, and temperature, thanks to a device placed in their plant pot. <br><br> This smart app-device combo ensures plants remain healthy, and its remote watering feature is perfect for students who travel frequently, allowing easy watering with just a few taps.",
                 "isParallax": false,
                 "images": ['/assets/florybelle-photo5.png', '/assets/florybelle-photo6.png']
             }
