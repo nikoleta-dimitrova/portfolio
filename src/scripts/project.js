@@ -24,7 +24,7 @@ const projectArr = [
             },
             {
                 "title": "Results",
-                "body": "The FloryBele app helps students monitor their plants by scanning them with their phone's camera, offering real-time data on moisture, sunlight, soil, and temperature. <br><br> Additionally, a pot device can automatically track these factors and send updates without the need of scanning. This smart system ensures healthy plants, with a remote watering feature perfect for student who travel frequently.",
+                "body": "The FloryBele app helps students monitor their plants by scanning them with their phone's camera, offering real-time data on moisture, sunlight, soil, and temperature. <br><br> Additionally, a pot device can automatically track these factors and send updates without the need of scanning. This smart system ensures healthy plants, with a remote watering feature perfect for students who travel frequently.",
                 "isParallax": false,
                 "images": ['/assets/florybelle-photo5.png', '/assets/florybelle-photo6.png']
             }
@@ -81,7 +81,7 @@ const projectArr = [
             },
             {
                 "title": "Main Problem",
-                "body": "A large portion of people are suffering from mental health issues daily. The numbers are reaching record rates because of how hectic our daily life has become. People are feeling the effects of overworking themselves and aren't feeling capable of continuing their work as efficiently as they did before.",
+                "body": "Many people suffer from mental health issues daily. The numbers are reaching record rates because of how hectic our daily life has become. People are feeling the effects of overworking themselves and aren't feeling capable of continuing their work as efficiently as they did before.",
                 "isParallax": true,
                 "images": ["/assets/pavemind-photo4.png"]
             },
