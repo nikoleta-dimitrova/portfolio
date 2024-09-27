@@ -1084,3 +1084,23 @@ nav a {
     }
   }
 }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 15px;
+
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #757575;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a9a9a9;
+}
