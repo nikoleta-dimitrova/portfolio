@@ -12,7 +12,7 @@ const projectArr = [
         "bodyParagraphs": [
             {
                 "title": "About Project",
-                "body": "FlorryBele is an app designed to help students care for their plants with ease. It provides detailed insights into their plants' specific needs, helping them keep their greenery alive and thriving. <br><br> Users can scan their plants with their phone's camera, and the app will offer detailed guidance on moisture requirements, sunlight exposure, soil quality, and optimal room temperature.",
+                "body": "FloryBele is an app designed to help students care for their plants with ease. It provides detailed insights into their plants' specific needs, helping them keep their greenery alive and thriving. <br><br> Users can scan their plants with their phone's camera, and the app will offer detailed guidance on moisture requirements, sunlight exposure, soil quality, and optimal room temperature.",
                 "isParallax": false,
                 "images": ['/assets/florybelle-photo2.png', '/assets/florybelle-photo3.png']
             },
@@ -24,7 +24,7 @@ const projectArr = [
             },
             {
                 "title": "Results",
-                "body": "The FlorryBele app helps students monitor their plants by scanning them with their phone's camera, offering real-time data on moisture, sunlight, soil, and temperature. <br><br> Additionally, a pot device can automatically track these factors and send updates without the need of scanning. This smart system ensures healthy plants, with a remote watering feature perfect for student who travel frequently.",
+                "body": "The FloryBele app helps students monitor their plants by scanning them with their phone's camera, offering real-time data on moisture, sunlight, soil, and temperature. <br><br> Additionally, a pot device can automatically track these factors and send updates without the need of scanning. This smart system ensures healthy plants, with a remote watering feature perfect for student who travel frequently.",
                 "isParallax": false,
                 "images": ['/assets/florybelle-photo5.png', '/assets/florybelle-photo6.png']
             }
