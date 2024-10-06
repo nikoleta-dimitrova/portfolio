@@ -40,12 +40,12 @@ const projectArr = [
         "expertise": ["Branding", "Concepting", "Prototyping"],
         "techUsed": ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
         "roleInProject": ["Lead Designer"],
-        "caseProject": "University Project",
+        "caseProject": "Duo Project",
         "parallax": "/assets/stormy-photo1.png",
         "bodyParagraphs": [
             {
                 "title": "About Project",
-                "body": "The app aims to help people become more aware of upcoming weather by providing real-time weather updates, warnings, and alerts, allowing users to make informed decisions about their activities and travel plans. <br><br> It was created during my 3nd year of studies. I was in a collaboration with a software student that handled the development of the app.",
+                "body": "The app aims to help people become more aware of upcoming weather by providing real-time weather updates, warnings, and alerts, allowing users to make informed decisions about their activities and travel plans. <br><br> For this project I was in a collaboration with a software student that handled the development of the app.",
                 "isParallax": false,
                 "images": ["/assets/stormy-photo2.png", "/assets/stormy-photo3.png"]
             },
@@ -78,7 +78,7 @@ const projectArr = [
         "bodyParagraphs": [
             {
                 "title": "About Project",
-                "body": "PaveMind is an educational website for students where they can not only help each other with burnout and mental health but also find tips and tricks on how to cope with it, become more aware of the problem, and learn new things about the topic. <br></br> Made for the client LiveWall during my third semester as a group project.",
+                "body": "PaveMind is an educational website for students where they can not only help each other with burnout and mental health but also find tips and tricks on how to cope with it, become more aware of the problem, and learn new things about the topic. <br></br> Made for the client LiveWall as a group project.",
                 "isParallax": false,
                 "images": ["/assets/pavemind-photo2.png", "/assets/pavemind-photo3.png"]
             },
@@ -105,7 +105,7 @@ const projectArr = [
         "expertise": ["Branding", "Design"],
         "techUsed": ["Adobe Illustrator", "Adobe Photoshop"],
         "roleInProject": ["Graphic Designer"],
-        "caseProject": "Client case",
+        "caseProject": "Passion project",
         "parallax": "/assets/ochaya-photo1.png",
         "bodyParagraphs": [
             {
@@ -142,7 +142,7 @@ const projectArr = [
         "bodyParagraphs": [
             {
                 "title": "About Project",
-                "body": "This project involved designing a portfolio website for Maaike Girardin, a Dutch-Canadian singer-songwriter. It was created during my second semester as a group project. <br> <br> As she is still in the beginning of her career, the goal was to create a visually appealing, multilingual site that highlights her music, performances, and tells more about herself. The website is designed with a user-friendly, accessible layout, supporting English, Dutch, and Italian languages.",
+                "body": "This project involved designing a portfolio website for Maaike Girardin, a Dutch-Canadian singer-songwriter. It was created for the singer as a group project. <br> <br> As she is still in the beginning of her career, the goal was to create a visually appealing, multilingual site that highlights her music, performances, and tells more about herself. The website is designed with a user-friendly, accessible layout, supporting English, Dutch, and Italian languages.",
                 "isParallax": false,
                 "images": ["/assets/maaike-photo2.png", "/assets/maaike-photo3.png"]
             },
