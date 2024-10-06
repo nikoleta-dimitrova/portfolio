@@ -515,7 +515,7 @@ nav a {
   display: grid;
   width: 71%;
   margin-bottom: calc(50 * var(--scale));
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(4, auto);
   font-size: calc(14 * var(--scale));
   line-height: 1.5;
 }

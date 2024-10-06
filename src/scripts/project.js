@@ -5,9 +5,10 @@ const projectArr = [
         "scriptLetter": ["o"],
         "tags": ["Prototyping", "Concepting"],
         "description": "An app about taking care of plants.",
-        "expertise": ["Research","Prototyping","Concepting", "Branding"],
+        "expertise": ["Research", "Prototyping", "Concepting", "Branding"],
         "techUsed": ["Adobe XD", "Adobe Illustrator"],
         "roleInProject": ["Lead Designer"],
+        "caseProject": "Passion project",
         "parallax": '/assets/florybelle-photo1.png',
         "bodyParagraphs": [
             {
@@ -39,11 +40,12 @@ const projectArr = [
         "expertise": ["Branding", "Concepting", "Prototyping"],
         "techUsed": ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
         "roleInProject": ["Lead Designer"],
+        "caseProject": "University Project",
         "parallax": "/assets/stormy-photo1.png",
         "bodyParagraphs": [
             {
                 "title": "About Project",
-                "body": "The app that we created aims to help people become more aware of upcoming weather by providing real-time weather updates, warnings, and alerts, allowing users to make informed decisions about their activities and travel plans.",
+                "body": "The app aims to help people become more aware of upcoming weather by providing real-time weather updates, warnings, and alerts, allowing users to make informed decisions about their activities and travel plans. <br><br> It was created during my 3nd year of studies. I was in a collaboration with a software student that handled the development of the app.",
                 "isParallax": false,
                 "images": ["/assets/stormy-photo2.png", "/assets/stormy-photo3.png"]
             },
@@ -70,12 +72,13 @@ const projectArr = [
         "projectImages": [],
         "expertise": ["Research", "Prototyping", "Development"],
         "techUsed": ["Adobe XD", "Adobe Illustrator", "Adobe InDesign", "HTML, CSS, JS"],
-        "roleInProject": ["Lead Designer", "Developer"],
+        "roleInProject": ["UX/UI Designer", "Front-end Developer"],
+        "caseProject": "Client case",
         "parallax": "/assets/pavemind-photo1.png",
         "bodyParagraphs": [
             {
                 "title": "About Project",
-                "body": "PaveMind is an educational website for students where they can not only help each other with burnout and mental health but also find tips and tricks on how to cope with it, become more aware of the problem, and learn new things about the topic.",
+                "body": "PaveMind is an educational website for students where they can not only help each other with burnout and mental health but also find tips and tricks on how to cope with it, become more aware of the problem, and learn new things about the topic. <br></br> Made for the client LiveWall during my third semester as a group project.",
                 "isParallax": false,
                 "images": ["/assets/pavemind-photo2.png", "/assets/pavemind-photo3.png"]
             },
@@ -102,6 +105,7 @@ const projectArr = [
         "expertise": ["Branding", "Design"],
         "techUsed": ["Adobe Illustrator", "Adobe Photoshop"],
         "roleInProject": ["Graphic Designer"],
+        "caseProject": "Client case",
         "parallax": "/assets/ochaya-photo1.png",
         "bodyParagraphs": [
             {
@@ -121,6 +125,38 @@ const projectArr = [
                 "body": "The Ochaya branding successfully captures the essence of matcha tea and provides a cohesive and appealing visual identity for the café. The designs received positive feedback and helped in establishing a strong brand presence.",
                 "isParallax": false,
                 "images": ["/assets/ochaya-photo5.png", "/assets/ochaya-photo6.png"]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Maaike",
+        "scriptLetter": ["M"],
+        "tags": ["Research", "Prototyping", "Development"],
+        "description": "Portfolio website for a Dutch singer",
+        "expertise": ["Research", "Prototyping", "Development"],
+        "techUsed": ["Adobe XD", "Adobe Illustrator", "HTML, CSS, JS"],
+        "caseProject": "Client case",
+        "roleInProject": ["UX/UI Designer", "Front-End Developer"],
+        "parallax": "/assets/maaike-photo1.png",
+        "bodyParagraphs": [
+            {
+                "title": "About Project",
+                "body": "This project involved designing a portfolio website for Maaike Girardin, a Dutch-Canadian singer-songwriter. It was created during my second semester as a group project. <br> <br> As she is still in the beginning of her career, the goal was to create a visually appealing, multilingual site that highlights her music, performances, and tells more about herself. The website is designed with a user-friendly, accessible layout, supporting English, Dutch, and Italian languages.",
+                "isParallax": false,
+                "images": ["/assets/maaike-photo2.png", "/assets/maaike-photo3.png"]
+            },
+            {
+                "title": "Main Problem",
+                "body": "The challenge was to design a website that balances showcasing Maaike's artistic style and way of expression while maintaining an intuitive user experience across devices.",
+                "isParallax": true,
+                "images": ["/assets/maaike-photo4.png"]
+            },
+            {
+                "title": "Results",
+                "body": "The website portrays Maaike Girardin's artistic persona, supports multilingual functionality, and showcases her music in a more engaging and creative way. It enhances her online presence and aims to connect her to a broader audience.",
+                "isParallax": false,
+                "images": ["/assets/maaike-photo5.png", "/assets/maaike-photo6.png"]
             }
         ]
     }
@@ -171,12 +207,19 @@ function updateProjectHTML() {
 
     // Clear and update the Role in project list
     const roleUl = projectInfo.querySelector("ul:nth-of-type(3)");
-    roleUl.innerHTML = "<p>Role in project</p>";
+    roleUl.innerHTML = "<p>Role</p>";
     project.roleInProject.forEach(exp => {
         const li = document.createElement("li");
         li.innerHTML = exp;
         roleUl.appendChild(li);
     });
+
+    // Clear and update the Type in project list
+    const caseUl = projectInfo.querySelector("ul:nth-of-type(4)");
+    caseUl.innerHTML = "<p>Type</p>";
+    const li = document.createElement("li");
+    li.innerHTML = project.caseProject;
+    caseUl.appendChild(li);
 
     const parallaxSection = document.querySelector('.parallax');
     const parallax = parallaxSection.querySelector('[data-select=parallax-image]');
