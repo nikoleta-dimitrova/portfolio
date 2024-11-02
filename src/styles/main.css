@@ -907,14 +907,18 @@ nav a {
     }
 
     .get-in-touch {
-      margin-left: calc(550 * var(--scale));
+      margin-left: calc(500 * var(--scale));
 
-      img {
-        height: calc(250 * var(--scale));
-      }
-
-      div {
+      #contact-circle {
+        background-size: calc(780 * var(--scale)) calc(390 * var(--scale));
+        padding-inline: calc(130 * var(--scale));
+        padding-block: 20px;
+        transform: translateX(calc(-170 * var(--scale)));
         font-size: calc(40 * var(--scale));
+
+        p {
+          transform: translateX(calc(-80 * var(--scale)));
+        }
       }
     }
 
