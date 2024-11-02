@@ -421,39 +421,36 @@ nav a {
   text-decoration: underline;
 }
 
-.get-in-touch div {
+
+.get-in-touch ul {
+  margin-left: calc(25 * var(--scale));
+}
+
+.get-in-touch #contact-circle {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(250 * var(--scale));
-  margin-top: calc(120 * var(--scale));
+  background-image: url("/public/assets/circle-contact.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: calc(380 * var(--scale)) calc(190 * var(--scale));
+  width: 85%;
+  height: 50px;
+  padding-block: 40px;
+  transform: translateX(calc(-90 * var(--scale)));
 }
 
-.get-in-touch div p {
+.get-in-touch #contact-circle p {
   margin-left: calc(25 * var(--scale));
   margin-top: calc(10 * var(--scale));
+  width: 50%;
+  position: absolute;
   z-index: 1;
 }
 
-.get-in-touch div a {
+.get-in-touch #contact-circle a {
   text-decoration: underline;
-}
-
-.get-in-touch ul {
-  margin-top: calc(80 * var(--scale));
-  margin-left: calc(25 * var(--scale));
-}
-
-.get-in-touch div img,
-.get-in-touch div p {
-  position: absolute;
-}
-
-
-.get-in-touch div img {
-  height: calc(120 * var(--scale));
-  width: auto;
 }
 
 .footer {
