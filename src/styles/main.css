@@ -924,7 +924,6 @@ nav a {
 
     ul li {
       font-size: calc(40 * var(--scale));
-      transform: translateY(calc(60* var(--scale)));
     }
 
   }
