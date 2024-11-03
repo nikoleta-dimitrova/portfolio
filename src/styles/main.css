@@ -197,6 +197,7 @@ nav a {
 }
 
 .header,
+.header-mobile,
 .header-title {
   font-family: var(--header-font);
   font-size: calc(175 * var(--scale)) !important;
@@ -777,7 +778,7 @@ nav a {
     display: none;
   }
 
-  .header {
+  .mobile-header, .header {
     font-size: calc(200 * var(--scale)) !important;
     letter-spacing: calc(-10 * var(--scale));
   }

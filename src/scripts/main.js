@@ -248,13 +248,15 @@ function createAnimations() {
     ease: "sine.inOut",
   });
 
-  gsap.from([nav], {
-    transform: 'translateY(-50px)',
-    opacity: 0,
-    duration: 1.5,
-    ease: "power2.out",
-    stagger: 0.1,
-  }, "-=0.8");
+  if (!isMobile()) {
+    gsap.from([nav], {
+      transform: 'translateY(-50px)',
+      opacity: 0,
+      duration: 1.5,
+      ease: "power2.out",
+      stagger: 0.1,
+    }, "-=0.8");
+  }
 
   // ------------------------ANIMATED HEADLINES-----------------------
   gsap.utils.toArray('.header').forEach(headline => {
