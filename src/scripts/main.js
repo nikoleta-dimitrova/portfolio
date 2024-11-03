@@ -495,7 +495,6 @@ function createAnimations() {
       duration: 1,
       scrollTrigger: {
         trigger: exploreProjectButton,
-        start: "top 95%",
         toggleActions: "play reverse play reverse",
       }
     }

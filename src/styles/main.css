@@ -950,10 +950,6 @@ nav a {
   }
 
   #project-body {
-    #project-landing .headline .description {
-      margin-left: calc(38 * var(--scale));
-    }
-
     .project-information {
       display: grid;
       grid-template-columns: repeat(2, auto);
