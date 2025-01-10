@@ -913,7 +913,7 @@ nav a {
       #contact-circle {
         background-size: calc(780 * var(--scale)) calc(390 * var(--scale));
         padding-inline: calc(130 * var(--scale));
-        padding-block: 20px;
+        padding-block: calc(110* var(--scale));
         transform: translateX(calc(-170 * var(--scale)));
         font-size: calc(40 * var(--scale));
 
