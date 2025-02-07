@@ -180,7 +180,7 @@ nav a {
 .headline {
   display: flex;
   flex-direction: column;
-  padding-top: calc(24 * var(--scale));
+  padding-top: calc(38 * var(--scale));
   margin-left: calc(38 * var(--scale));
 }
 
@@ -201,16 +201,16 @@ nav a {
 .header-title {
   font-family: var(--header-font);
   font-size: calc(175 * var(--scale)) !important;
-  letter-spacing: calc(-10 * var(--scale));
+  letter-spacing: calc(-8 * var(--scale));
   height: calc(160 * var(--scale));
   display: flex;
-  align-items: flex-start;
+  align-items: center ;
   font-weight: 500;
 }
 
 .accent {
   font-family: var(--accent-font), cursive;
-  font-size: calc(170 * var(--scale));
+  font-size: calc(160 * var(--scale));
   font-weight: 200;
   margin-inline: 0.3rem;
   margin-top: calc(40 * var(--scale));
