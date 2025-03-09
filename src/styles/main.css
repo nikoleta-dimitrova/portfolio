@@ -6,8 +6,8 @@
 
 /* 375 is the size of your mobile design width */
 :root {
-  --scale: calc(100vw / 1200);
-  --header-font: "The Seasons", "Playfair";
+  --scale: calc(1440px / 1200);
+  --header-font: "Instrument Serif";
   --accent-font: "Inspiration";
   --body-font: "Inter";
   --font-color: #272727;
@@ -17,7 +17,7 @@
 967 is the breakpoint between mobile and desktop */
 @media (min-width: 967px) {
   :root {
-    --scale: calc(100vw / 1570);
+    --scale: calc(1440px / 1570);
   }
 
   .heading {
@@ -178,15 +178,14 @@ nav a {
 }
 
 .headline {
-  display: flex;
-  flex-direction: column;
   padding-top: calc(38 * var(--scale));
-  margin-left: calc(38 * var(--scale));
+  padding-left: calc(38 * var(--scale));
 }
 
 .headline div {
   display: flex;
   align-items: flex-end;
+  margin-top: calc(-20 * var(--scale));
 }
 
 .headline div .description {
@@ -200,11 +199,10 @@ nav a {
 .header-mobile,
 .header-title {
   font-family: var(--header-font);
-  font-size: calc(175 * var(--scale)) !important;
-  letter-spacing: calc(-8 * var(--scale));
-  height: calc(160 * var(--scale));
+  font-size: calc(190 * var(--scale)) !important;
+  height: calc(190 * var(--scale)) !important;
+  letter-spacing: calc(-2 * var(--scale));
   display: flex;
-  align-items: center ;
   font-weight: 500;
 }
 
@@ -213,21 +211,7 @@ nav a {
   font-size: calc(160 * var(--scale));
   font-weight: 200;
   margin-inline: 0.3rem;
-  margin-top: calc(40 * var(--scale));
-}
-
-/* Fixing handwritten letters sizes */
-#letter-d,
-#letter-e,
-#letter-b,
-#letter-n,
-#letter-o {
-  margin-right: calc(10 * var(--scale));
-  line-height: calc(130 * var(--scale));
-}
-
-#letter-b {
-  margin-left: calc(20 * var(--scale));
+  margin-top: calc(29* var(--scale));
 }
 
 #letter-n {
@@ -902,7 +886,6 @@ nav a {
 
   #contact-page {
     .contact-question {
-      margin-left: 0;
       font-size: calc(40 * var(--scale));
       width: calc(550 * var(--scale));
     }
