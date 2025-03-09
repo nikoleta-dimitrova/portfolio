@@ -416,25 +416,24 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/public/assets/circle-contact.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: calc(380 * var(--scale)) calc(190 * var(--scale));
-  width: 85%;
+  width: 80%;
   height: 50px;
   padding-block: 40px;
-  transform: translateX(calc(-90 * var(--scale)));
+  transform: translateX(calc(-60 * var(--scale)));
+}
+
+#contact-circle img {
+  height: calc(120 * var(--scale));
 }
 
 .get-in-touch #contact-circle p {
-  margin-left: calc(25 * var(--scale));
-  margin-top: calc(10 * var(--scale));
-  width: 50%;
+  margin-left: calc(50 * var(--scale));
+  width: 70%;
   position: absolute;
   z-index: 1;
 }
 
-.get-in-touch #contact-circle a {
+.get-in-touch a {
   text-decoration: underline;
 }
 
@@ -779,6 +778,7 @@ nav a {
     div {
       flex-direction: column;
       align-items: normal !important;
+      margin-top: calc(20 * var(--scale));
       gap: calc(80 * var(--scale));
     }
 
@@ -794,7 +794,7 @@ nav a {
   #letter-b,
   #letter-n,
   #letter-o {
-    line-height: calc(180 * var(--scale));
+    line-height: calc(220 * var(--scale));
     font-size: calc(190* var(--scale));
   }
 
@@ -886,6 +886,7 @@ nav a {
 
   #contact-page {
     .contact-question {
+      margin-top: 0;
       font-size: calc(40 * var(--scale));
       width: calc(550 * var(--scale));
     }
@@ -894,14 +895,19 @@ nav a {
       margin-left: calc(500 * var(--scale));
 
       #contact-circle {
-        background-size: calc(780 * var(--scale)) calc(390 * var(--scale));
+        background-size: calc(850 * var(--scale)) calc(390 * var(--scale));
         padding-inline: calc(130 * var(--scale));
         padding-block: calc(110* var(--scale));
-        transform: translateX(calc(-170 * var(--scale)));
+        transform: translateX(calc(-190 * var(--scale)));
         font-size: calc(40 * var(--scale));
 
         p {
-          transform: translateX(calc(-80 * var(--scale)));
+          width: calc(800 * var(--scale));
+          transform: translateX(calc(60 * var(--scale)));
+        }
+
+        img {
+          height: calc(275 * var(--scale));
         }
       }
     }
