@@ -6,7 +6,7 @@
 
 /* 375 is the size of your mobile design width */
 :root {
-  --scale: calc(1440px / 1200);
+  --scale: calc(100vw / 1200);
   --header-font: "Instrument Serif";
   --accent-font: "Inspiration";
   --body-font: "Inter";
@@ -17,7 +17,7 @@
 967 is the breakpoint between mobile and desktop */
 @media (min-width: 967px) {
   :root {
-    --scale: calc(1440px / 1570);
+    --scale: calc(100vw / 1570);
   }
 
   .heading {
