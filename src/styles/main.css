@@ -25,6 +25,84 @@
   }
 }
 
+/* Grain background on pages */
+.grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-event: none;
+  z-index: 1;
+  transform: translateZ(0);
+
+  &:before {
+    content: "";
+    top: -10rem;
+    left: -10rem;
+    width: calc(100% + 20rem);
+    height: calc(100% + 20rem);
+    z-index: 2;
+    position: fixed;
+    background-image: url(/public/assets/grain-texture.jpg);
+    opacity: 0.15;
+    pointer-events: none;
+    animation: noise 3s steps(5) infinite;
+  }
+}
+
+@-webkit-keyframes noise {
+  to {
+    transform: translate3d(-7rem, 0, 0)
+  }
+}
+
+@keyframes noise {
+  0% {
+    transform: translate3d(0, 9rem, 0)
+  }
+
+  10% {
+    transform: translate3d(-1rem, -4rem, 0)
+  }
+
+  20% {
+    transform: translate3d(-8rem, 2rem, 0)
+  }
+
+  30% {
+    transform: translate3d(9rem, -9rem, 0)
+  }
+
+  40% {
+    transform: translate3d(-2rem, 7rem, 0)
+  }
+
+  50% {
+    transform: translate3d(-9rem, -4rem, 0)
+  }
+
+  60% {
+    transform: translate3d(2rem, 6rem, 0)
+  }
+
+  70% {
+    transform: translate3d(7rem, -8rem, 0)
+  }
+
+  80% {
+    transform: translate3d(-9rem, 1rem, 0)
+  }
+
+  90% {
+    transform: translate3d(6rem, -5rem, 0)
+  }
+
+  to {
+    transform: translate3d(-7rem, 0, 0)
+  }
+}
+
 .heading {
   font-size: calc(var(--scale) * 22);
 }
@@ -133,6 +211,10 @@ nav .mobile {
 
 .main-body section:nth-child(2n - 1) {
   background-color: #e2e4d5;
+}
+
+section div {
+  z-index: 5;
 }
 
 .back-button-container {
@@ -761,7 +843,8 @@ nav a {
     display: none;
   }
 
-  .mobile-header, .header {
+  .mobile-header,
+  .header {
     font-size: calc(200 * var(--scale)) !important;
     letter-spacing: calc(-10 * var(--scale));
   }
@@ -1042,8 +1125,7 @@ nav a {
       width: 100%;
     }
 
-    .project-about .description > p
-    #main-problem {
+    .project-about .description>p #main-problem {
       width: calc(800 * var(--scale));
     }
 

@@ -120,7 +120,7 @@ function createAnimations() {
   const arrowTop = document.querySelector('.arrow-top');
   const backToTopButton = document.getElementById('back-to-top');
   const aboutMe = document.querySelector(".about-text");
-  const contactQuestion = document.querySelector(".contact-question");
+  const contactQuestion = document.querySelector(".contact-question .description");
   const getTouch = document.querySelector(".get-in-touch");
   const footerAnimation = document.querySelector(".footer");
   const myPhoto = document.querySelector(".photo");
@@ -429,7 +429,7 @@ function createAnimations() {
       duration: 1,
       scrollTrigger: {
         trigger: contactQuestion,
-        start: "top 95%",
+        start: "top 85%",
         toggleActions: "play reverse play reverse",
       }
     }
