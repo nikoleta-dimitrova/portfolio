@@ -882,7 +882,6 @@ nav a {
   }
 
   .say-hi {
-    padding-right: 1rem;
     margin-bottom: calc(40 * var(--scale));
 
     img {
