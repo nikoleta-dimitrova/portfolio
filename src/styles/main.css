@@ -786,7 +786,7 @@ nav a {
 }
 
 @media (max-width: 967px) {
-  .main-boidy section {
+  .main-body section {
     padding-left: calc(40 * var(--scale));
     padding-right: calc(-40 * var(--scale));
   }
@@ -855,13 +855,13 @@ nav a {
 
     .header-title {
       font-size: calc(220 * var(--scale)) !important;
-      letter-spacing: calc(-15 * var(--scale));
+      letter-spacing: calc(-8 * var(--scale));
     }
 
     div {
       flex-direction: column;
       align-items: normal !important;
-      margin-top: calc(20 * var(--scale));
+      margin-top: calc(16 * var(--scale));
       gap: calc(80 * var(--scale));
     }
 
@@ -919,6 +919,11 @@ nav a {
     #circle-number-projects {
       /* width: calc(200 * var(--scale)); */
       display: none;
+    }
+
+    .number-of-project {
+      font-size: 12px;
+      margin-right: 12px;
     }
 
     .project-tag {
