@@ -1027,14 +1027,25 @@ nav a {
   }
 
   #project-body {
+    padding-left: calc(40 * var(--scale));
+    padding-right: calc(-40 * var(--scale));
+
     .project-information {
       display: grid;
       grid-template-columns: repeat(2, auto);
+      gap: 8px;
+      margin-right: calc(40 * var(--scale));
+      margin-left: calc(40 * var(--scale));
+
+
+
     }
 
     #back-button {
       font-size: calc(40 * var(--scale));
-      padding-top: calc(38 * var(--scale));
+      padding-top: calc(40 * var(--scale));
+      padding-left: calc(40 * var(--scale));
+
     }
 
     .project-information li {
@@ -1105,7 +1116,7 @@ nav a {
       }
 
       .content__image {
-        width: 100%;
+        width: 150%;
         height: 100%;
         object-fit: cover;
       }
